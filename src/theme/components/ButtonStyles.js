@@ -15,7 +15,7 @@ export const ButtonStyles = {
     round: {
       bg: 'primary',
       color: 'white',
-      fontFamily: 'body',
+      fontFamily: 'alt',
       fontWeight: 'bold',
       fontSize: {base: '20px', desktop: '25px'},
       lineHeight: {base: '24px', desktop:'23px'},

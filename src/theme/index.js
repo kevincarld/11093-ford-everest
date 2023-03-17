@@ -14,21 +14,27 @@ const customTheme = extendTheme({
     lg: '1024px',
     d: '1280px',
     wide: '1600px',
+    hd: '1900px',
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
+    body: "Ford Antenna, system-ui, sans-serif",
+    heading: "Ford Antenna, system-ui, sans-serif",
+    alt: "Ford Antenna Cond, system-ui, sans-serif",
     mono: "Menlo, monospace",
   },
   colors: {
-    primary: '#3DCD58',
-    gray: '#F2F2F2',
+    primary: '#00095B',
+    blue: '#00095B',
+    cta: '#000D5C',
+    accent: '#1700F4',
+    black: '#171717',
+    white: '#FFFFFF',
     link: '#5081FF'
   },
   space: {
     gutter: '20px',
-    gridcol: '108px',
-    gridmargin: '202px',
+    gridcol: '85px',
+    gridmargin: '340px',
     px: '1px',
     spacer: '40px',
     desktop: {
@@ -37,8 +43,8 @@ const customTheme = extendTheme({
   },
   sizes: {
     gutter: '20px',
-    gridcol: '108px',
-    gridmargin: '202px',
+    gridcol: '85px',
+    gridmargin: '340px',
     px: '1px',
     spacer: '40px',
     desktop: {
@@ -49,11 +55,9 @@ const customTheme = extendTheme({
     full: '100%',
     half: '50%',
     container: {
-      desktop: '1516px',
+      desktop: '1240px',
     },
   },
-
-
 
   fontSizes: {
     xs: "0.75rem",
