@@ -10,8 +10,36 @@ import Container from "components/util/Container"
 export default function Home() {
   return (
     <Layout>
-      <Heading as="h1">Heading</Heading>
-      <Button variant='round'>Button</Button>
+      {/* TODO */}
+      {/* <Hero /> */}
+
+      {/* TODO */}
+      {/* <Intro /> */}
+
+      {/* TODO */}
+      {/* <SecondIntro /> */}
+
+      {/* TODO */}
+      {/* <Car /> */}
+
+      {/* TODO */}
+      {/* <Drive /> */}
+
+      {/* TODO */}
+      {/* <Camping /> */}
+
+      {/* TODO */}
+      {/* <Blue /> */}
+
+      {/* TODO */}
+      {/* <Travel /> */}
+
+      {/* TODO */}
+      {/* <Video /> */}
+
+      {/* TODO */}
+      {/* <FooterSlider /> */}
+
 
     </Layout>
   )
