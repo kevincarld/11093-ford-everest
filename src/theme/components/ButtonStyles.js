@@ -11,11 +11,25 @@ export const ButtonStyles = {
   sizes: {},
 
   // styles for different visual variants ("outline", "solid")
-  variants: {},
+  variants: {
+    round: {
+      bg: 'primary',
+      color: 'white',
+      fontFamily: 'body',
+      fontWeight: 'bold',
+      fontSize: {base: '20px', desktop: '25px'},
+      lineHeight: {base: '24px', desktop:'23px'},
+      height: 'auto',
+      pt: '20px',
+      pb: '20px',
+      pl: '50px',
+      pr: '50px',
+      borderRadius: '9999px',
+    }
+  },
 
   // default values for 'size', 'variant' and 'colorScheme'
   defaultProps: {
-    variant: 'solid',
-    size: "md",
+    variant: 'cta'
   },
 }
