@@ -3,9 +3,15 @@ import Layout from "components/util/Layout"
 // chakra
 import { Heading, Button } from "@chakra-ui/react"
 //
-import Slider from "components/util/Slider/Slider"
-import PreLine from "components/util/PreLine"
-import Container from "components/util/Container"
+import Intro from "components/blocks/Intro"
+import SecondIntro from "components/blocks/SecondIntro"
+import Car from "components/blocks/Car"
+import Drive from "components/blocks/Drive"
+import Camping from "components/blocks/Camping"
+import Blue from "components/blocks/Blue"
+import Travel from "components/blocks/Travel"
+import Video from "components/blocks/Video"
+import FooterSlider from "components/blocks/FooterSlider"
 
 export default function Home() {
   return (
@@ -13,29 +19,21 @@ export default function Home() {
       {/* TODO */}
       {/* <Hero /> */}
 
-      {/* TODO */}
-      {/* <Intro /> */}
+      <Intro />
 
-      {/* TODO */}
-      {/* <SecondIntro /> */}
+      <SecondIntro />
 
-      {/* TODO */}
-      {/* <Car /> */}
+      <Car />
 
-      {/* TODO */}
-      {/* <Drive /> */}
+      <Drive />
 
-      {/* TODO */}
-      {/* <Camping /> */}
+      <Camping />
 
-      {/* TODO */}
-      {/* <Blue /> */}
+      <Blue />
 
-      {/* TODO */}
-      {/* <Travel /> */}
+      <Travel />
 
-      {/* TODO */}
-      {/* <Video /> */}
+      <Video />
 
       {/* TODO */}
       {/* <FooterSlider /> */}

@@ -6,7 +6,19 @@ const customTheme = extendTheme({
     Button
   },
   textStyles: {
-
+    heading: {
+      fontFamily: 'heading',
+      fontWeight: 'medium',
+      fontSize: {base: '21px', lg: '22px'},
+      lineHeight: {base: '28px', lg: '30px'},
+    },
+    body: {
+      fontFamily: 'body',
+      fontWeight: 'medium',
+      color: 'black',
+      fontSize: {base: '17px', lg: '16px'},
+      lineHeight: {base: '30px', lg: '29px'}
+    }
   },
   breakpoints : {
     sm: '360px',
