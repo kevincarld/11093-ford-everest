@@ -1,7 +1,7 @@
 
 import Layout from "components/util/Layout"
 // chakra
-import { Heading, Button } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 //
 import Intro from "components/blocks/Intro"
 import SecondIntro from "components/blocks/SecondIntro"
@@ -16,28 +16,30 @@ import FooterSlider from "components/blocks/FooterSlider"
 export default function Home() {
   return (
     <Layout>
-      {/* TODO */}
-      {/* <Hero /> */}
+      <Box bg=''>
+        {/* TODO */}
+        {/* <Hero /> */}
 
-      <Intro />
+        <Intro />
 
-      <SecondIntro />
+        {/* <SecondIntro /> */}
 
-      <Car />
+        {/* <Car /> */}
 
-      <Drive />
+        {/* <Drive /> */}
 
-      <Camping />
+        {/* <Camping /> */}
 
-      <Blue />
+        {/* <Blue /> */}
 
-      <Travel />
+        {/* <Travel /> */}
 
-      <Video />
+        {/* <Video /> */}
 
-      {/* TODO */}
-      {/* <FooterSlider /> */}
+        {/* TODO */}
+        {/* <FooterSlider /> */}
 
+      </Box>
 
     </Layout>
   )
