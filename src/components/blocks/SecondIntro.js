@@ -13,7 +13,7 @@ export default function SecondIntro() {
     <Box pos='relative' zIndex={2} pt={{base: '100px'}} overflow={{base: 'hidden', lg: 'initial'}} mt={{lg: '-600px',  wide: '-700px', hd: '-850px'}}>
       <Grid templateColumns={{lg: '1fr 1fr', wide: '8fr 4fr'}} maxW='1604px' mx='auto' >
         <GridItem order={{lg: 1}}>
-          <Box pos='relative' p={{base: '0 20px 26px'}} mt={{lg: '550px', d: '650px', wide: '750px', hd: '1000px'}}>
+          <Box pos='relative' p={{base: '0 20px 26px'}} pl={{wide:0}} mt={{lg: '550px', d: '650px', wide: '750px', hd: '1000px'}}>
             {/* skid */}
             <Box pos='absolute' h={{base:'80px', d:'170px'}} inset={{base: '-130px -100% auto 0', lg:'-250px 0 auto 0', hd: '-350px -140px auto 0'}} bgImage='./bg/skid.png' bgRepeat={'no-repeat'} bgPosition='right bottom' bgSize={{base: 'cover', lg: '100%'}} />
 
@@ -26,7 +26,7 @@ export default function SecondIntro() {
         </GridItem>
 
         <GridItem pr={{lg: '40px'}}>
-          <VStack alignItems={'flex-end'} pr={{lg: '60px'}}>
+          <VStack alignItems={'flex-end'} pr={{wide: '60px'}}>
             <Figure mb={{base: '5px', lg: '35px'}}>
               <Img dimension='949x1049' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-1.jpg' alt='man chilling next to his ford everest' />
             </Figure>

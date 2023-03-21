@@ -11,10 +11,12 @@ export default function Intro() {
 
   return (
     <Box className='intro' pos='relative' {...texture.mask.desktop}>
+      <Img display={{base:'none', lg:'block'}} zIndex='2' alt='skid mark' dimension='228x471' src='./bg/intro-top-skid.png' pos='absolute' top='120px' right='0' objectFit='cover' />
+
       <Container>
         <Grid templateColumns={{lg: '6fr 6fr', wide: '8fr 4fr'}} gap={{lg: '50px', d:'0'}}>
           <GridItem pos='relative' {...texture.mask}>
-            <Box pos='relative' zIndex='10' p={{base: '25% 20px 55px'}}>
+            <Box pos='relative' zIndex='10' p={{base: '25% 20px 55px'}} px={{wide: 0}}>
               <Text as='h2' {...texts.heading} mb='60px' maxW={{d: '830px'}}>Turon National Park is wedged like a splinter into the western side of the Greater Blue Mountains region. </Text>
               <Text textStyle='body' maxW={{d: '482px'}}>It’s only 185 kilometres from Sydney but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.</Text>
             </Box>
