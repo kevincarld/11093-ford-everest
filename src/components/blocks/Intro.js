@@ -20,8 +20,8 @@ export default function Intro() {
             </Box>
           </GridItem>
 
-          <GridItem pos='relative' zIndex='10' pt={{lg: '220px'}}  mr={{wide: '-40%', hd: '-300px'}}>
-            <Figure mb={{base: '5px'}}>
+          <GridItem pos='relative' zIndex='10' pt={{lg: '220px',  wide:'380px', hd:"420px"}}  mr={{wide: '-40%', hd: '-250px'}}>
+            <Figure mb={{base: '5px', lg: '30px'}}>
               <Img dimension='709x479' w={{base: 'full'}} fit='cover' alt='ford everest with driver outside its window' src={'./images/intro-1.jpg'} />
             </Figure>
 

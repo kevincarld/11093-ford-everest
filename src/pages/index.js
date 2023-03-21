@@ -15,6 +15,8 @@ import FooterSlider from "components/blocks/FooterSlider"
 
 export default function Home() {
   return (
+    // TODO: add accent lines
+
     <Layout>
       <Box bg=''>
         {/* TODO */}
@@ -22,7 +24,7 @@ export default function Home() {
 
         <Intro />
 
-        {/* <SecondIntro /> */}
+        <SecondIntro />
 
         {/* <Car /> */}
 
