@@ -19,8 +19,7 @@ export default function Home() {
 
     <Layout>
       <Box bg=''>
-        {/* TODO */}
-        {/* <Hero /> */}
+        <Hero />
 
         <Intro />
 
