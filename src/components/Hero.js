@@ -88,7 +88,7 @@ export default function Hero() {
       </Box>
 
       {/* middle box */}
-      <Box pos='absolute' display={'flex'} flexDir='column' inset='100px 0 0 0' alignItems={'center'} >
+      <Box pos='absolute' inset='100px 0 0 0' >
         <Box ref={slider2Ref} pos='relative' className="swiper-container slider2" w={{base: '95%'}} mr={{base: 'auto'}}  overflow='hidden'>
           <Box className="swiper-wrapper">
             <SwiperSlide className='swiper-slide' >
@@ -101,9 +101,17 @@ export default function Hero() {
               <Image fit='cover' w='full' src={'./images/hero-c.jpg'} />
             </SwiperSlide>
           </Box>
-
         </Box>
 
+        <Box pos='relative' zIndex={2} mt={{base: '-10px'}} px={{base: '20px'}}>
+          <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
+            {`Trekking
+            Hill End`}
+          </PreLine>
+          <Text {...texts.subtitle}>A 4x4 Adventure</Text>
+
+          <Text pt={{base: '180px'}} {...texts.presented}>Presented by Ford Everest</Text>
+        </Box>
 
         {/* arrows */}
         <AspectRatio ratio={{base: 359/287}} pos='absolute' inset='0 0 auto 0'>
@@ -146,8 +154,26 @@ export default function Hero() {
 
 // font styles
 const texts = {
-  xx: {
-
-  }
+  heading: {
+    color: 'white',
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base:'55px', sm: '62px'},
+    lineHeight: {base: '55px', sm: '62px'},
+  },
+  subtitle: {
+    color: 'white',
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base: '26px'},
+    lineHeight: {base: '26px'},
+  },
+  presented: {
+    color: 'white',
+    fontFamily: 'heading',
+    fontWeight: 'regular',
+    fontSize: {base: '15px'},
+    lineHeight: {base: '20px'},
+  },
 }
 
