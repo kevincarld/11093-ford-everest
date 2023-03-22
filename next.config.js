@@ -24,7 +24,7 @@ const nextConfig = {
       siteName: 'The Sydney Morning Herald', // The Sydney Morning Herald, Good Food
       icon: 'smh', // smh, goodfood, nine, afr, traveller
       themeColour: '#000D5C', // hex
-      ogImage: 'tbd',
+      ogImage: 'https://live-native-paid-content.pantheonsite.io/wp-content/uploads/2023/03/11093-FORD-Everest-SOCIAL-1920x1080-1.jpg',
       date: '27-03-23', // e.g 03-12-23
       year: '2023' // e.g 2023
     },
