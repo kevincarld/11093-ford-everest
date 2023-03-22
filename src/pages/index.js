@@ -3,6 +3,7 @@ import Layout from "components/util/Layout"
 // chakra
 import { Box } from "@chakra-ui/react"
 //
+import Hero from "components/Hero"
 import Intro from "components/blocks/Intro"
 import SecondIntro from "components/blocks/SecondIntro"
 import Car from "components/blocks/Car"
