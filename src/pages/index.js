@@ -26,17 +26,15 @@ export default function Home() {
 
         <SecondIntro />
 
-        {/* <Car /> */}
+        <Car />
 
+        {/* OS */}
         {/* <Drive /> */}
-
         {/* <Camping /> */}
-
         {/* <Blue /> */}
-
         {/* <Travel /> */}
-
         {/* <Video /> */}
+        {/* OS */}
 
         {/* TODO */}
         {/* <FooterSlider /> */}
