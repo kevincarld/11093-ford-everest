@@ -13,6 +13,17 @@ export default function Intro() {
     <Box className='intro' pos='relative' {...texture.mask.desktop}>
       <Img display={{base:'none', lg:'block'}} zIndex='2' alt='skid mark' dimension='228x471' src='./bg/intro-top-skid.png' pos='absolute' top='120px' right='0' objectFit='cover' />
 
+      <Text
+        {...texts.presented}
+        display={{base:'block', lg:'none'}}
+        pos='absolute'
+        inset={{base: '-120px 0 auto 20px', md: '-100px 0 auto 20px'}}
+        zIndex='10'
+      >
+        Presented by Ford Everest
+        </Text>
+
+
       <Container>
         <Grid templateColumns={{lg: '6fr 6fr', wide: '8fr 4fr'}} gap={{lg: '50px', d:'0'}}>
           <GridItem pos='relative' {...texture.mask}>
@@ -45,7 +56,14 @@ const texts = {
     fontWeight: 'medium',
     fontSize: {base: '18px', sm: '21px', d: '40px'},
     lineHeight: {base: '28px', d: '50px'},
-  }
+  },
+  presented: {
+    color: 'white',
+    fontFamily: 'heading',
+    fontWeight: 'regular',
+    fontSize: {base: '15px'},
+    lineHeight: {base: '20px'},
+  },
 }
 
 const texture = {
@@ -54,7 +72,7 @@ const texture = {
       '&:before': {
         content: '""',
         pos: 'absolute',
-        top: '-25%',
+        top: '-160px',
         left: '0',
         bottom: '-20%',
         w: 'full',
@@ -71,7 +89,7 @@ const texture = {
           '&:before': {
             content: '""',
             pos: 'absolute',
-            top: '-25%',
+            top: { base:'-15%', wide: '-20%', hd: '-15%'},
             left: '0',
             bottom: '0',
             w: 'full',
