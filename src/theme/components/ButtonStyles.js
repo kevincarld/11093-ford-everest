@@ -16,7 +16,7 @@ export const ButtonStyles = {
       bg: 'primary',
       color: 'white',
       fontFamily: 'alt',
-      fontWeight: 'bold',
+      fontWeight: 'light',
       fontSize: {base: '20px', desktop: '25px'},
       lineHeight: {base: '24px', desktop:'23px'},
       height: 'auto',

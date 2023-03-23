@@ -1,0 +1,49 @@
+import React from 'react'
+import { Box, Text, Button, Link, Image, Grid, GridItem } from '@chakra-ui/react'
+import PreLine from 'components/util/PreLine'
+import NineLink from 'components/util/NineLink'
+import { mock } from 'utils/common'
+import Container from 'components/util/Container'
+import Img from 'components/util/Img'
+import Figure from 'components/util/Figure'
+
+export default function FooterSlider() {
+
+  return (
+    <Box px={{base: '20px'}} textAlign='center'>
+      <Text as='h2' {...texts.title}>Built to last</Text>
+      <PreLine display={{base: 'block', lg: 'none'}} {...texts.subtitle}>
+        {`Click on the various hotspots to find
+        out more about the features of the
+        Next-Gen Ford Everest
+        `}
+      </PreLine>
+      <PreLine display={{base: 'none', lg: 'block'}} {...texts.subtitle}>
+        {`Click on the various hotspots to find out more about
+         the features of the Next-Gen Ford Everest
+        `}
+      </PreLine>
+
+
+      <Button variant={'round'}>Find out more</Button>
+    </Box>
+  )
+}
+
+// font styles
+const texts = {
+  title: {
+    color: 'cta',
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base: '48px', sm: '52px', lg: '100px'},
+    lineHeight: {base: '71px', lg: '184px'},
+  },
+  subtitle: {
+    color: 'black',
+    fontWeight: 'medium',
+    fontSize: {base: '14px', sm: '16px'},
+    lineHeight: {base: '28px'},
+  }
+}
+

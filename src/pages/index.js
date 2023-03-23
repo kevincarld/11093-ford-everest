@@ -20,13 +20,13 @@ export default function Home() {
 
     <Layout>
       <Box bg=''>
-        <Hero />
+        {/* <Hero /> */}
 
-        <Intro />
+        {/* <Intro /> */}
 
-        <SecondIntro />
+        {/* <SecondIntro /> */}
 
-        <Car />
+        {/* <Car /> */}
 
         {/* OS */}
         {/* <Drive /> */}
@@ -36,8 +36,7 @@ export default function Home() {
         {/* <Video /> */}
         {/* OS */}
 
-        {/* TODO */}
-        {/* <FooterSlider /> */}
+        <FooterSlider />
 
       </Box>
 
