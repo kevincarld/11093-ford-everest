@@ -28,10 +28,11 @@ export default function Home() {
 
         {/* <Car /> */}
 
-        <Drive />
+        {/* <Drive />
         <Camping />
-        <Blue />
-        {/* <Travel /> */}
+         */}
+         <Blue />
+        <Travel />
         {/* <Video /> */}
 
         {/* <Footer /> */}

@@ -20,6 +20,7 @@ export default function Blue() {
                 West`}
               </PreLine>
 
+              {/* Line */}
               <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='55px' />
 
               <Text maxW={{lg: '515px'}} color='white' {...texts.bigBody}>
