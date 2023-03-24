@@ -3,7 +3,7 @@ import Layout from "components/util/Layout"
 // chakra
 import { Box } from "@chakra-ui/react"
 //
-import Hero from "components/Hero"
+import Hero from "components/blocks/Hero"
 import Intro from "components/blocks/Intro"
 import SecondIntro from "components/blocks/SecondIntro"
 import Car from "components/blocks/Car"
@@ -12,7 +12,7 @@ import Camping from "components/blocks/Camping"
 import Blue from "components/blocks/Blue"
 import Travel from "components/blocks/Travel"
 import Video from "components/blocks/Video"
-import FooterSlider from "components/blocks/FooterSlider"
+import Footer from "components/blocks/Footer"
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
         {/* <Video /> */}
         {/* OS */}
 
-        <FooterSlider />
+        <Footer />
 
       </Box>
 

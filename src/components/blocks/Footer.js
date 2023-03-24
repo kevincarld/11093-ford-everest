@@ -6,8 +6,9 @@ import { mock } from 'utils/common'
 import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
+import FooterSlider from 'components/FooterSlider'
 
-export default function FooterSlider() {
+export default function Footer() {
 
   return (
     <Box px={{base: '20px'}} textAlign='center'>
@@ -24,8 +25,9 @@ export default function FooterSlider() {
         `}
       </PreLine>
 
+      <FooterSlider />
 
-      <Button variant={'round'}>Find out more</Button>
+      <Button mt={{base: '40px', lg: '20px'}} variant={'round'}>Find out more</Button>
     </Box>
   )
 }
