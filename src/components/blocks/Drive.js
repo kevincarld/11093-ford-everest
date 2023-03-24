@@ -9,60 +9,47 @@ import Figure from 'components/util/Figure'
 export default function Drive() {
 
   return (
-    <Container pb={{base: '6px',wide: '60px',lg:'60px'}}>
-      <Grid gap='52px' templateColumns={{wide: '5fr 7fr', lg: '6fr 6fr', md:'6fr 6fr'}}>
-        
-          <GridItem pl='20px' >
-            <Box w='31px' bg='primary' h='3px'></Box>
-            <Text as='p' pt='25px' fontSize='21px' pr='60px' color='blue'  maxW={{lg:'506px'}}>
+    <Container pb={{ base: '6px', lg:'67px' }}>
+      <Grid gap={{base:'52px', hd:'108px'}} templateColumns={{ lg: '6fr 6fr', wide: '5.5fr 6.5fr', }}>
+        <GridItem px={{base:'20px', d:'0' }} display='flex' alignItems='flex-end'>
+          <Box>
+            {/* line */}
+            <Box bg='primary' w={{base: '30px', lg: '50px'}} h={{base:'3px', lg: '6px'}} />
+
+            <Text pt='25px' {...texts.title} maxW={{lg:'505px'}}>
                 The Ford Everest, largely developed and tested in Australia and with plenty of engine grunt, is up to the challenge of the bush conditions.
             </Text>
-            <Text {...texts.content} pr='24px' as='p' fontSize='17px' maxW={{lg:'550px'}}>
+            <Text {...texts.content} maxW={{lg:'510px'}}>
               Although you’ll need reasonable experience, a dedicated off-road screen on your Ford Everest’s dash can assist with information about your driveline settings and the vehicle’s pitch and roll, while a camera provides a view of the terrain ahead.
             </Text>
-          </GridItem>
-        
-        <GridItem>
-          <Grid  gap={{sm:'6px'}}    templateColumns={{wide:'8fr 4fr',lg: '8fr 3fr',md: '9fr 2fr'}}>
-            
-            <Img  dimension='800x452' w={{base: 'full'}} fit='cover'   src={mock('800x452', 'drive-1', 'blue')} />
-            <Img dimension='917x515' w={{base: 'full'}} fit='cover'  src={mock('917x515', 'drive-2', 'red')}/>
+          </Box>
+        </GridItem>
 
+        <GridItem mr={{wide: '-150px', hd: '-320px'}}>
+          <Grid gap={{ base:'6px', lg: '13px' }} templateColumns={{ wide:'9.5fr 2.5fr' }}>
+            <Img dimension='800x452' w={{base: 'full'}} fit='cover' src={'./images/drive-1.jpg'} mock='drive-1' />
+            <Img dimension='375x225' w={{base: 'full'}} h='full' fit='cover' src={'./images/drive-2-mob.jpg'} mock='drive-2-mob' />
           </Grid>
         </GridItem>
       </Grid>
     </Container>
-    // <Flex h={{base:'full', lg: '1260px'}} justifyContent='center' align='end' pb={{base:'0px',sm:'0px',lg:'90px'}}  direction={{base: 'column', sm: 'column', lg: 'row'}} gap={{base: '51px', lg:'107px'}}>
-    //   <Box p={{base: '21px 19px 0px 21px'}} >
-    //     <Img dimension='56x6' src='/Images/line-blue.png' pb='25px'/>
-
-    //     
-
-    //     
-    //   </Box>
-
-    //     <Flex gap={{base: '6px', sm: '6px', lg:'10px'}} fontSize='17px' maxH='538px' h='full' direction={{base: 'column', sm: 'column', lg: 'row'}}>
-    //       
-    //          
-    //     </Flex>
-    // </Flex>
-    
-      
-
-    
-      
-    
-    
   )
 }
 
 // font styles
 const texts = {
+  title: {
+    color: 'blue',
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base: '21px', lg: '22px'},
+    lineHeight: {base: '28px', lg:'30px'},
+  },
   content: {
     color: 'black',
     fontFamily: 'heading',
-    fontWeight: 'normal',
-    fontSize: {base: '17px', d: '22px'},
-    lineHeight: {base: '30px', d: '28px'},
+    fontWeight: 'medium',
+    fontSize: {base: '17px', lg: '16px'},
+    lineHeight: {base: '30px', lg: '28px'},
   },
 }

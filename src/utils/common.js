@@ -52,6 +52,6 @@ export const mock = (dimensions, text='Img', color="gray") => {
     yellow: 'FFE194',
     pink: 'F7DCEC'
   }
-  let newText = text.replaceAll(' ', '+')
+  let newText = text.toString().replaceAll(' ', '+')
   return `https://via.placeholder.com/${dimensions}/${colors[color]}?text=${newText}`
 }
