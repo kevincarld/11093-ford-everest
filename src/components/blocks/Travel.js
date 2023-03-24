@@ -12,7 +12,7 @@ export default function Travel() {
 
      <Container pt={{wide:'270px', lg:'220px'}}>
         <Grid templateColumns={{lg: '1.5fr 1fr'}} gap={{wide:'100px'}}>
-          <GridItem p={{base:'50px 20px', wide:'0px 20px', lg:'0px 20px'}}>
+          <GridItem p={{base:'50px 20px', wide:'0px 20px', lg:'0px 20px'}} pos='relative' top={{ wide: '-70px' }}>
             {/* Line */}
             <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='25px'></Box>
 
