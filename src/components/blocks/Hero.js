@@ -161,7 +161,9 @@ export default function Hero() {
                 </PreLine>
                 <Text {...texts.subtitle}>A 4x4 Adventure</Text>
 
-                <Text pt={{base: '70px'}} {...texts.presented}>Presented by Ford Everest</Text>
+                <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='70px' mb='25px'></Box>
+
+                <Text {...texts.presented}>Presented by Ford Everest</Text>
               </Box>
 
             </Box>

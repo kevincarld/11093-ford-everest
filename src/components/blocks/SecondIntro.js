@@ -17,7 +17,10 @@ export default function SecondIntro() {
             {/* skid */}
             <Box pos='absolute' h={{base:'80px', d:'170px'}} inset={{base: '-130px -100% auto 0', lg:'-250px 0 auto 0', hd: '-350px -140px auto 0'}} bgImage='./bg/skid.png' bgRepeat={'no-repeat'} bgPosition='right bottom' bgSize={{base: 'cover', lg: '100%'}} />
 
+
             <PreLine textStyle='body' maxW={{lg: '505px'}} ml={{wide: 'auto'}}>
+              <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mb='30px'></Box>
+
               {`It reminds you how lucky we are in Australia to have such landscapes so near our cities to feed our spirit of adventure. Pack everyone into a Ford Everest and set off on a 4WD exploration. Turon National Park has everything for a great family getaway: bushwalking, mountain biking, kayaking, fishing, swimming in waterholes.
 
               For 4WD enthusiasts, this is an outstanding destination. You don’t need to be geared up for an outback trek, but the terrain has plenty to challenge your driving skills, including river crossings, steep hills, and narrow tracks between entanglements of eucalyptus trees.`}

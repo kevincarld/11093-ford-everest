@@ -29,10 +29,13 @@ export default function Home() {
         <Car />
 
         <Drive />
+
         <Camping />
 
          <Blue />
+
         <Travel />
+
         <Video />
 
         {/* <Footer /> */}

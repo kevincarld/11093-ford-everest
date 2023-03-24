@@ -17,9 +17,11 @@ export default function Intro() {
         {...texts.presented}
         display={{base:'block', lg:'none'}}
         pos='absolute'
-        inset={{base: '-120px 0 auto 20px', md: '-100px 0 auto 20px'}}
+        inset={{base: '-150px 0 auto 20px', md: '-100px 0 auto 20px'}}
         zIndex='10'
       >
+        <Box as='span' display='block' w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mb='25px'></Box>
+
         Presented by Ford Everest
         </Text>
 
@@ -28,7 +30,11 @@ export default function Intro() {
         <Grid templateColumns={{lg: '6fr 6fr', wide: '8fr 4fr'}} gap={{lg: '50px', d:'0'}}>
           <GridItem pos='relative' {...texture.mask}>
             <Box pos='relative' zIndex='10' p={{base: '25% 20px 55px'}} px={{wide: 0}}>
-              <Text as='h2' {...texts.heading} mb='60px' maxW={{d: '830px'}}>Turon National Park is wedged like a splinter into the western side of the Greater Blue Mountains region. </Text>
+              <Text as='h2' {...texts.heading}  maxW={{d: '830px'}}>Turon National Park is wedged like a splinter into the western side of the Greater Blue Mountains region. </Text>
+
+              {/* Line */}
+              <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='20px' mb='45px'></Box>
+
               <Text textStyle='body' maxW={{d: '482px'}}>It’s only 185 kilometres from Sydney but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.</Text>
             </Box>
           </GridItem>

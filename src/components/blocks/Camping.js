@@ -9,7 +9,7 @@ import Figure from 'components/util/Figure'
 export default function Camping() {
 
   return (
-    <Flex pos='relative' direction={{base:'column', lg:'row'}} justify='end'>
+    <Flex pos='relative' zIndex={4} direction={{base:'column', lg:'row'}} justify='end'>
 
       <AspectRatio w='full' minH={{lg: '791px'}} ratio={{base: 375/225, lg: 1760/791}}>
         <Img dimension='1760x791'  w={{base: 'full'}} fit='cover' src='./images/camping.jpg' />

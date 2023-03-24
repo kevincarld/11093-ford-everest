@@ -9,10 +9,10 @@ import Figure from 'components/util/Figure'
 export default function Drive() {
 
   return (
-    <Container pb={{ base: '6px', lg:'67px' }}>
+    <Container pb={{ base: '6px', lg:'67px' }} pos='relative' zIndex='4' top={{wide: '-60px'}}>
       <Grid gap={{base:'52px', hd:'108px'}} templateColumns={{ lg: '6fr 6fr', wide: '5.5fr 6.5fr', }}>
-        <GridItem px={{base:'20px', d:'0' }} display='flex' alignItems='flex-end'>
-          <Box>
+        <GridItem px={{base:'20px', d:'0' }} display='flex' alignItems={{lg: 'center', wide:'flex-end'}}>
+          <Box pos='relative' ml={{ wide: '-50px'}}>
             {/* line */}
             <Box bg='primary' w={{base: '30px', lg: '50px'}} h={{base:'3px', lg: '6px'}} />
 
@@ -25,7 +25,7 @@ export default function Drive() {
           </Box>
         </GridItem>
 
-        <GridItem mr={{wide: '-150px', hd: '-320px'}}>
+        <GridItem mr={{wide: '-150px', hd: '-320px'}} ml={{ wide: '-20px'}}>
           <Grid gap={{ base:'6px', lg: '13px' }} templateColumns={{ wide:'9.5fr 2.5fr' }}>
             <Img dimension='800x452' w={{base: 'full'}} fit='cover' src={'./images/drive-1.jpg'} mock='drive-1' />
             <Img dimension='375x225' w={{base: 'full'}} h='full' fit='cover' src={'./images/drive-2-mob.jpg'} mock='drive-2-mob' />
