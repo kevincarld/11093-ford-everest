@@ -28,15 +28,13 @@ export default function Home() {
 
         {/* <Car /> */}
 
-        {/* OS */}
-        {/* <Drive /> */}
-        {/* <Camping /> */}
-        {/* <Blue /> */}
-        {/* <Travel /> */}
-        {/* <Video /> */}
-        {/* OS */}
+        <Drive />
+        <Camping />
+        <Blue />
+        <Travel />
+        <Video />
 
-        <Footer />
+        {/* <Footer /> */}
 
       </Box>
 
