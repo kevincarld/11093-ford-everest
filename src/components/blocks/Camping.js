@@ -21,7 +21,7 @@ export default function Camping() {
           textStyle='body'
           maxW={{md: '440px'}}
           w='full'
-          p={{ sm: '50px 32px 50px 20px', md: '50px 0 50px' }}
+          p={{ base: '50px 32px 50px 20px', md: '50px 0 50px' }}
           pt={{base: '50px', lg:'158px', wide:'160px'}}
           mr={{lg: '50px', d:'155px'}}
         >

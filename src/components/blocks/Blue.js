@@ -9,10 +9,10 @@ import Figure from 'components/util/Figure'
 export default function Blue() {
 
   return (
-    <Box bg='primary'>
-      <Container>
-        <Grid gap={{lg: '60px', wide: '115px'}} templateColumns={{ lg: '1.5fr 1fr' }} >
-          <GridItem pt={{base:'56px'}} px={{base: '23px', d: 0}}>
+    <Box mt={{base: '80px', md: '140px', lg: 0}} bg='primary' pos='relative' {...texture.mask}>
+      <Container pt={{ lg: '40px'}} pos='relative' zIndex='30'>
+        <Grid pt={{hd: '60px'}} gap={{lg: '60px', wide: '115px'}} templateColumns={{ lg: '1.5fr 1fr' }} >
+          <GridItem pt={{base:'56px',}} px={{base: '23px', d: 0}}>
             <Box pl={{wide:'100px'}}>
               <Text {...texts.preheading} mb={{base: '5px!important', lg: '10px!important'}}> The best of the </Text>
               <PreLine {...texts.heading}>
@@ -26,7 +26,7 @@ export default function Blue() {
               <Text maxW={{lg: '515px'}} color='white' {...texts.bigBody}>
                 Start at Capertree beyond Lithgow, where you hit the beginning of your 4WD adventure as gravel takes over tarmac at Turon Gates Road.
               </Text>
-              <Text maxW={{lg: '515px'}} color='white' textStyle='body'>
+              <Text maxW={{lg: '515px'}} mb={{lg: '30px', d: '60px', wide: 0}} color='white' textStyle='body'>
                 A slight reduction in tyre pressure should set you up for steep sections of track now you’re in Turon National Park. The track wiggles along a ridge through scribbly gums, before descending steeply towards the river on a few excitingly sharp bends. You don’t have too far to go to set up camp at either Woolshed Flat or The Diggings.
               </Text>
             </Box>
@@ -56,7 +56,7 @@ export default function Blue() {
         </GridItem>
 
         <GridItem order={{lg:'-1'}} >
-          <Figure>
+          <Figure mt={{wide: '-140px',}}>
             <Img
               ml={{wide: 'auto'}}
               dimension='940x1041'
@@ -91,5 +91,25 @@ const texts = {
     fontWeight: 'medium',
     fontSize: {base: '62px', lg: '124px'},
     lineHeight: {base: '62px', lg: '124px'},
+  }
+}
+
+const texture = {
+  mask: {
+    sx: {
+      '&:before': {
+        content: '""',
+        pos: 'absolute',
+        left: '0',
+        bottom: '0',
+        top: '0',
+        w: 'full',
+        zIndex: '20',
+        bgSize: {base: '100%'},
+        bgRepeat: 'no-repeat',
+        bgImage: {base: './bg/blue.png', lg: './bg/blue-d.png'},
+        top: { base: '-4%', md: '-6%', lg: '-10%'},
+      }
+    }
   }
 }
