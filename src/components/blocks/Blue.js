@@ -42,8 +42,10 @@ export default function Blue() {
       </Container>
 
       <Grid templateColumns={{ lg: '1.3fr 1fr'}} gap={{ lg: '150px'}}>
-        <GridItem>
+        <GridItem {...texture.tire} pos='relative'>
           <PreLine
+            pos='relative'
+            zIndex='40'
             p={{ base:'30px 23px', lg: '86px 40px 0 0', wide: '86px 0 0' }}
             maxW={{ lg: '505px' }}
             textStyle='body'
@@ -58,6 +60,8 @@ export default function Blue() {
         <GridItem order={{lg:'-1'}} >
           <Figure mt={{wide: '-140px',}}>
             <Img
+              pos='relative'
+              zIndex='50'
               ml={{wide: 'auto'}}
               dimension='940x1041'
               fit='cover'
@@ -109,6 +113,22 @@ const texture = {
         bgRepeat: 'no-repeat',
         bgImage: {base: './bg/blue.png', lg: './bg/blue-d.png'},
         top: { base: '-4%', md: '-6%', lg: '-10%'},
+      },
+    }
+  },
+  tire: {
+    sx:{
+      '&:after': {
+        content: '""',
+        pos: 'absolute',
+        left: { base: '0', lg: '-30%' },
+
+        bottom: '0',
+        w: {base: 'full', lg: '150%'},
+        zIndex: '30',
+        bgRepeat: 'repeat-x',
+        bgImage: './bg/blue-tire.png',
+        h: {base: '50%'}
       }
     }
   }

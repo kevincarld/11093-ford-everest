@@ -20,7 +20,7 @@ export default function Home() {
 
     <Layout>
       <Box bg=''>
-        <Hero />
+        {/* <Hero />
 
         <Intro />
 
@@ -30,7 +30,7 @@ export default function Home() {
 
         <Drive />
 
-        <Camping />
+        <Camping /> */}
 
          <Blue />
 
