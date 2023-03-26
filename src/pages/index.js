@@ -19,7 +19,7 @@ export default function Home() {
     // TODO: add accent lines
 
     <Layout>
-      <Box bg=''>
+      <Box bg='' overflow='hidden'>
         <Hero />
 
         <Intro />
@@ -32,13 +32,13 @@ export default function Home() {
 
         <Camping />
 
-         <Blue />
+        <Blue />
 
         <Travel />
 
         <Video />
 
-        {/* <Footer /> */}
+        <Footer />
 
       </Box>
 

@@ -49,30 +49,54 @@ export default function BrightCoveVideo({script, dataPlayer, dataVideoId, ...res
     }
   }, [isInView])
 
+  const onPlay = () => {
+    const video = document.querySelector('.video-js');
+    const videoID = video?.getAttribute('id');
+    const player = window?.videojs?.getPlayer(videoID);
+
+
+    if(video && player){
+      if (!player.paused()) {
+        player.pause();
+      } else {
+        player.play();
+      }
+    }
+  }
+
   if(!script || !dataPlayer || !dataVideoId) return null
 
+
   return (
-    <Box
-      class="vid-container"
-      ref={ref}
-      sx={{
-        'video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode)': {
-          paddingTop: '56.25%',
-        },
-      }}
-      {...rest}
-    >
-      <video-js
-        data-account="6165065566001"
-        data-player={dataPlayer}
-        data-embed="default"
-        data-video-id={dataVideoId}
-        data-playlist-id=""
-        data-application-id=""
-        class="vjs-fluid"
-        loop
-        muted
-      />
+    <Box pos='relative' mt={{base: '30px', lg: '50px'}} onClick={onPlay}>
+      <Box
+        class="vid-container"
+        ref={ref}
+        sx={{
+          'video-js.video-js.vjs-fluid:not(.vjs-audio-only-mode)': {
+            paddingTop: '56.25%',
+          },
+        }}
+        {...rest}
+      >
+        <video-js
+          data-account="6165065566001"
+          data-player={dataPlayer}
+          data-embed="default"
+          data-video-id={dataVideoId}
+          data-playlist-id=""
+          data-application-id=""
+          class="vjs-fluid"
+          loop
+          // muted
+          controls
+        />
+
+      </Box>
+
+      {/* mask */}
+      <Box pos='absolute' inset='0 -1px -1px -1px' bgImage='./bg/vid-mask.png' bgSize='100% 100%' />
     </Box>
+
   )
 }

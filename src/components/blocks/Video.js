@@ -5,6 +5,7 @@ import { mock } from 'utils/common'
 import Container from '../util/Container'
 import Img from '../util/Img'
 import Figure from 'components/util/Figure'
+import BrightCoveVideo from 'components/util/BrightCoveVideo'
 
 export default function Video() {
 
@@ -35,6 +36,13 @@ export default function Video() {
             fit='cover'
             src={'./images/video-1.jpg'}
           />
+
+          <BrightCoveVideo
+            script={'https://players.brightcove.net/6165065566001/WkAEp4m5G_default/index.min.js'}
+            dataPlayer={'WkAEp4m5G'}
+            dataVideoId={'6323356171112'}
+          />
+
         </GridItem>
       </Grid>
     </Container>
