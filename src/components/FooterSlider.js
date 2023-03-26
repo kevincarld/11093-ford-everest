@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem, Flex,
+import { Box, Text, Button, Link, Image, Grid, GridItem, Flex, AspectRatio,
   //drawer
   useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody
 } from '@chakra-ui/react'
@@ -31,8 +31,14 @@ export default function FooterSlider() {
 
   return (
     <Container>
-      <Flex justifyContent={'space-between'} alignItems='center'>
-        <Button onClick={handleDecrement}>
+      <Flex pos='relative' justifyContent={{base: 'center', lg:'space-between'}} alignItems='center'>
+        <Button onClick={handleDecrement} w={{base: '22px', lg: '34px'}} p='0' pos={{base: 'absolute', lg: 'relative'}} zIndex='3' left={{base:'-18px', md: 0}}
+          sx={{
+            'svg': {
+              w: {base: '22px', md: '34px'}
+            }
+          }}
+        >
           <svg id="ARROW_BACK" data-name="ARROW BACK" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
             <rect id="Rectangle_2075" data-name="Rectangle 2075" width="34" height="34" rx="3" fill="#00095b"/>
             <path id="arrow" d="M8.932.194h0a.661.661,0,0,1,0,.934L1.6,8.463h0L8.934,15.8a.661.661,0,0,1,0,.935l0,0a.661.661,0,0,1-.935,0l-7.8-7.8A.659.659,0,0,1,.194,8L8,.194a.661.661,0,0,1,.934,0" transform="translate(10.872 8.999)" fill="#fff"/>
@@ -41,7 +47,13 @@ export default function FooterSlider() {
 
         <Car car={car} />
 
-        <Button onClick={handleIncrement}>
+        <Button onClick={handleIncrement}  w={{base: '22px', lg: '34px'}} p='0' pos={{base: 'absolute', lg: 'relative'}} zIndex='3' right={{base: '-18px', md: 0}}
+          sx={{
+            'svg': {
+              w: {base: '22px', md: '34px'}
+            }
+          }}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
             <g id="ARROW_FWD" data-name="ARROW FWD" transform="translate(-1822.753 -495.807)">
               <rect id="Rectangle_2075" data-name="Rectangle 2075" width="34" height="34" rx="3" transform="translate(1822.753 495.807)" fill="#00095b"/>
@@ -60,17 +72,35 @@ export default function FooterSlider() {
 /////////////////// CAR and buttons //////////////////////
 const Car = ({car}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const withContent = [1,3,4,6,7,10]
 
-  const carImages = [
-    mock('663x386', 'car1', 'red'),
-    mock('663x386', 'car2', 'green'),
-    mock('663x386', 'car3', 'black'),
+  const carTexts = [
+    {title: `Responsive
+    V6 Engine`, content: 'that delivers power and torque for off-roading and towing.'},
+    {title: '', content: ''},
+    {title: `Spacious,
+    well-crafted
+    interior `, content: 'that ups refinement levels, because off-road driving shouldn’t mean sacrificing style and comfort.'},
+    {title: `Nine
+    Airbags `, content: 'for the protection of the driver and all passengers.'},
+    {title: '', content: ''},
+    {title: `Clear,
+    responsive
+    12-inch
+    touchscreen `, content: 'with the latest communication and entertainment systems.'},
+    {title: `Six drive
+    modes `, content: 'including four off-road modes: Slippery, Mud/Ruts, Sand and Tow/Haul.'},
+    {title: '', content: ''},
+    {title: '', content: ''},
+    {title: `ANCAP
+    5 Star Safety
+    Rating`, content: 'with safety features such as smart driver assistance technology, road-edge and blind-spot detection, and reverse break assist.'},
   ]
 
   return (
     <Box pos='relative'>
 
-      <Button onClick={onOpen}>
+      <Button onClick={withContent.includes(car) ? onOpen : null}>
         <svg width="32" height="32" viewBox="0 0 32 32">
           <defs>
             <clipPath id="clip-path">
@@ -89,13 +119,16 @@ const Car = ({car}) => {
         </svg>
       </Button>
 
-      <Img dimension='663x386' src={carImages[car-1]} />
+      <AspectRatio mx='auto' minW={{base: '90vw', md: '636px'}} ratio={636/390}>
+        <>
+          {car}
+          <Img w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/${car}.png`} />
+        </>
+      </AspectRatio>
 
 
 
-
-
-      <Drawer onClose={onClose} isOpen={isOpen} size={'xl'} >
+      <Drawer onClose={onClose} isOpen={isOpen} size='xl' >
         <DrawerOverlay bg='rgba(255,255,255,0.7)' backdropFilter={'blur(5px)'}/>
 
         <DrawerContent
@@ -108,20 +141,56 @@ const Car = ({car}) => {
         >
           <DrawerBody
             display='flex'
-            alignItems={'flex-end'}
+            alignItems={'center'}
+            maxW='60%'
+            ml='auto'
+            color='white'
           >
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Consequat nisl vel pretium lectus quam id. Semper quis lectus
-              nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-              quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-              magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-              Lectus vestibulum mattis ullamcorper velit.
-            </p>
+            <Box pr={{lg: '75px'}}>
+              <Flex mb='80px' pos='relative' right='-50px'>
+                <Button onClick={onClose} aria-label='close modal' ml='auto'>
+                  <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
+                    <g id="X" transform="translate(-1795.03 -9942.032)">
+                      <g id="Ellipse_27" data-name="Ellipse 27" transform="translate(1812 9975.974) rotate(-135)" fill="none" stroke="#fff" stroke-width="1">
+                        <circle cx="12" cy="12" r="12" stroke="none"/>
+                        <circle cx="12" cy="12" r="11.5" fill="none"/>
+                      </g>
+                      <path id="Path_13979" data-name="Path 13979" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1807.758 9954.761) rotate(-45)" fill="#fff"/>
+                      <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1807.757 9963.247) rotate(-135)" fill="#fff"/>
+                    </g>
+                  </svg>
+                </Button>
+              </Flex>
+
+              <PreLine as='h3' mb={{base: '30px'}} {...texts.title}>
+                {carTexts[car-1].title}
+              </PreLine>
+
+              <Text maxW='409px' {...texts.content}>
+                {carTexts[car-1].content}
+              </Text>
+
+              <Button>Find out more</Button>
+            </Box>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </Box>
   )
+}
+
+
+const texts = {
+  title: {
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base: '47px', d: '92px'},
+    lineHeight: {base: '55px', d: '92px'},
+  },
+  content: {
+    fontFamily: 'heading',
+    fontWeight: 'medium',
+    fontSize: {base: '20px', d: '22px'},
+    lineHeight: {base: '30px', d: '30px'},
+  },
 }

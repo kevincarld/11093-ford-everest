@@ -66,6 +66,7 @@ const customTheme = extendTheme({
     min: 'min-content',
     full: '100%',
     half: '50%',
+    '4xl': '1260px', //used for footer slider modal
     container: {
       desktop: '1240px',
     },
@@ -85,6 +86,7 @@ const customTheme = extendTheme({
     "7xl": "4.5rem",
     "8xl": "6rem",
     "9xl": "8rem",
+    'modal': '1160px'
   },
   fontWeights: {
     hairline: 100,

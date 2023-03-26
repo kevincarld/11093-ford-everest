@@ -27,7 +27,7 @@ export default function Footer() {
 
       <FooterSlider />
 
-      <Button mt={{base: '40px', lg: '20px'}} variant={'round'}>Find out more</Button>
+      <Button mt={{base: '40px', lg: '50px'}} variant={'round'}>Find out more</Button>
     </Box>
   )
 }
