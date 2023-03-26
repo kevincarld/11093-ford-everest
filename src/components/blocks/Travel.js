@@ -9,10 +9,10 @@ import Figure from 'components/util/Figure'
 export default function Travel() {
 
   return (
-
-     <Container pt={{wide:'270px', lg:'220px'}}>
+    <Box pos='relative' {...texture.mask}>
+     <Container pt={{ lg:'220px', d:'150px', wide:'230px', hd: '270px' }} pos='relative' zIndex='70'>
         <Grid templateColumns={{lg: '1.5fr 1fr'}} gap={{wide:'100px'}}>
-          <GridItem p={{base:'50px 20px', wide:'0px 20px', lg:'0px 20px'}} pos='relative' top={{ wide: '-70px' }}>
+          <GridItem p={{base:'30px 20px 50px', lg:'0px 20px'}} pos='relative' top={{ wide: '-70px' }}>
             {/* Line */}
             <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='25px'></Box>
 
@@ -34,7 +34,7 @@ export default function Travel() {
           </GridItem>
         </Grid>
      </Container>
-
+    </Box>
   )
 }
 
@@ -46,5 +46,26 @@ const texts = {
     fontWeight: 'medium',
     fontSize: {base: '22px'},
     lineHeight: {base: '30px'},
+  },
+}
+
+
+const texture = {
+  mask: {
+    sx: {
+      '&:before': {
+        content: '""',
+        pos: 'absolute',
+        left: '0',
+        bottom: '0',
+        top: '0',
+        w: 'full',
+        zIndex: '60',
+        bgSize: {base: '100% 50%', lg: '100%'},
+        bgRepeat: 'no-repeat',
+        bgImage: { base: './bg/travel-mob.png', lg: './bg/travel.png' },
+        top: { base: '-7%', d: '-17%', hd: '-20%'},
+      },
+    }
   },
 }

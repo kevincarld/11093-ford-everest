@@ -9,7 +9,7 @@ import Figure from 'components/util/Figure'
 export default function Video() {
 
   return (
-    <Container>
+    <Container pos='relative' zIndex='80'>
       <Grid templateColumns={{ lg: '7fr 5fr '}} gap={{ lg: '40px' }}>
         <GridItem p={{base:'25px 24px 30px 20px', md: '0px 20px', wide: '0'}} pos='relative' right={{wide: '-120px'}}>
           {/* :Line */}
