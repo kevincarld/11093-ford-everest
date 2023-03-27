@@ -14,7 +14,7 @@ import { Navigation, Autoplay, Mousewheel, Controller } from "swiper";
 //
 import { motion } from "framer-motion";
 import FeatureHeader from 'components/util/FeatureHeader'
-
+import { animation_zoom } from 'utils/motion'
 export default function Hero() {
   const navigationPrevRef = React.useRef(null)
   const navigationNextRef = React.useRef(null)
@@ -73,12 +73,27 @@ export default function Hero() {
 
 
   return (
-    <Box pos='relative' >
+    <Box pos='relative' sx={{
+      '.swiper-button-disabled': {
+        opacity: 0.45,
+      }
+    }}>
       <FeatureHeader href='#'/>
       {/* cover */}
       <Box ref={slider1Ref} className="swiper-container slider1" h={{base: '840px', lg: '900px', wide: '1105px'}} overflow='hidden'>
-        <Box className="swiper-wrapper">
-          <SwiperSlide className='swiper-slide' >
+        <Box as={motion.div} className="swiper-wrapper"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              delay: .4,
+              duration: 1.4,
+            }
+          }}
+        >
+          <SwiperSlide as={motion.div} className='swiper-slide' >
             <Image fit='cover' h='full' w='full' src={'./images/back-3.jpg'} objectPosition={{base: '36%', lg: 'center'}}/>
           </SwiperSlide>
           <SwiperSlide className='swiper-slide' >
@@ -95,7 +110,7 @@ export default function Hero() {
         <Box ref={slider2Ref} pos='relative' className="swiper-container slider2" w={{base: '95%', md: 'full'}}   overflow='hidden'>
           <Box className="swiper-wrapper">
             <SwiperSlide className='swiper-slide' >
-              <Image fit='cover' w='full'  src={`./images/hero-a${isLg ? '-lg' : ''}.jpg`} />
+              <Image as={motion.img} variants={animation_zoom} initial='hide' animate='zoom' fit='cover' w='full'  src={`./images/hero-a${isLg ? '-lg' : ''}.jpg`} />
             </SwiperSlide>
             <SwiperSlide className='swiper-slide' >
               <Image fit='cover' w='full' src={`./images/hero-b${isLg ? '-lg' : ''}.jpg`} />
@@ -106,13 +121,13 @@ export default function Hero() {
           </Box>
         </Box>
 
-        <Box pos='relative' zIndex={2} mt={{base: '-10px'}} px={{base: '20px'}} display={{base: 'block', lg: 'none'}}>
-          <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
-            {`Trekking
-            Hill End`}
-          </PreLine>
-          <Text {...texts.subtitle}>A 4x4 Adventure</Text>
-        </Box>
+          <Box pos='relative' zIndex={2} mt={{base: '-10px'}} px={{base: '20px'}} display={{base: 'block', lg: 'none'}} >
+            <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
+              {`Trekking
+              Hill End`}
+            </PreLine>
+            <Text {...texts.subtitle}>A 4x4 Adventure</Text>
+          </Box>
 
         {/* arrows and desktop title */}
         <AspectRatio ratio={{base: 359/287, lg: 950/474}} pos='absolute' inset={{base: '0 0 auto 0', wide: '0 -70px auto -70px'}} >
@@ -155,7 +170,20 @@ export default function Hero() {
               justifyContent='flex-start!important'
               inset={{base: '0 0 0 0',}}
             >
-              <Box pl={{base: '100px', wide: '140px'}}>
+              <Box as={motion.div} pl={{base: '100px', wide: '140px'}}
+              initial={{
+                opacity: 0,
+                x: -100
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: .6,
+                  duration: 1.5
+                }
+              }}
+              >
                 <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
                   {`Trekking
                   Hill End`}

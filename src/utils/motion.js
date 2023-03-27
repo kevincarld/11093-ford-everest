@@ -35,15 +35,17 @@ export const animation_shaker = {
 
 export const animation_zoom = {
   hide: {
-    opacity: 0,
-    scale: 1.2,
+    opacity:0,
+    scale: 1.4,
   },
   zoom: {
     opacity: 1,
     scale: 1,
     transition: {
       delay: .4,
-      duration: 1.2
+      scale: {
+        duration: 2.1
+      }
     }
   }
 }

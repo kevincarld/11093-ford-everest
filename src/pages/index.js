@@ -16,8 +16,6 @@ import Footer from "components/blocks/Footer"
 
 export default function Home() {
   return (
-    // TODO: add accent lines
-
     <Layout>
       <Box bg='' pb={{lg:'54px'}}>
         <Hero />
