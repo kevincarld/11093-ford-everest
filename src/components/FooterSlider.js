@@ -154,7 +154,7 @@ const Car = ({car}) => {
 
       <AspectRatio mx='auto' minW={{base: '90vw', md: '636px'}} ratio={636/390}>
         <>
-          {car}
+          {/* {car} */}
           {car === 1 &&
             <Box>
               <Img dimension='69x69' w='69px' h='69px' src='./images/360.png' draggable='false' opacity='.75' zIndex={10} pos='relative' />

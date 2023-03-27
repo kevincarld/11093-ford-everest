@@ -18,9 +18,9 @@ export default function Layout({children}) {
       <GlobalCss />
       <GuideLines />
 
-      <DefaultLayout>
+      <LocomotiveLayout>
         {children}
-      </DefaultLayout>
+      </LocomotiveLayout>
     </ChakraProvider>
 
   )
@@ -43,14 +43,10 @@ const LocomotiveLayout = ({ children }) => {
     smooth: true,
     inertia: 0.75,
     mobile: {
-      breakpoint: 0,
-      getDirection: true, // <---- Fixes The Issue
-      smooth: true,
+      smooth: false,
     },
     tablet: {
-      breakpoint: 0, // <---- Fixes The Issue
-      getDirection: true, // <---- Fixes The Issue
-      smooth: true,
+      smooth: false,
     },
   }
   return (

@@ -19,7 +19,7 @@ export default function SecondIntro() {
 
 
             <PreLine textStyle='body' maxW={{lg: '505px'}} ml={{wide: 'auto'}}>
-              <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mb='30px'></Box>
+              <Box as='span' display='block' w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mb='30px'></Box>
 
               {`It reminds you how lucky we are in Australia to have such landscapes so near our cities to feed our spirit of adventure. Pack everyone into a Ford Everest and set off on a 4WD exploration. Turon National Park has everything for a great family getaway: bushwalking, mountain biking, kayaking, fishing, swimming in waterholes.
 

@@ -30,8 +30,8 @@ const nextConfig = {
     },
     jobCode: '11093-ford', // used for nine ga scripts
     guidelines: true, // shows or hides layout guideline bars
-    activateMasthead: false, // shows or hides masthead
-    mastheadOverride: false, // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
+    activateMasthead: true, // shows or hides masthead
+    mastheadOverride: 'smh', // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
   }
 }
 

@@ -19,7 +19,7 @@ export default function Home() {
     // TODO: add accent lines
 
     <Layout>
-      <Box bg='' overflow='hidden'>
+      <Box bg='' pb='54px'>
         <Hero />
 
         <Intro />
@@ -40,6 +40,7 @@ export default function Home() {
 
         <Footer />
 
+        <footer></footer>
       </Box>
 
     </Layout>
