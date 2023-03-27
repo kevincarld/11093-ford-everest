@@ -126,7 +126,7 @@ export default function Hero() {
 
           <Box pos='relative' zIndex={2} mt={{base: '-10px'}} px={{base: '20px'}} display={{base: 'block', lg: 'none'}} >
             <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
-              {`Trekking
+              {`Exploring
               Hill End`}
             </PreLine>
             <Text {...texts.subtitle}>A 4x4 Adventure</Text>
@@ -188,7 +188,7 @@ export default function Hero() {
               }}
               >
                 <PreLine as='h1' mb={{base: '10px'}} {...texts.heading}>
-                  {`Trekking
+                  {`Exploring
                   Hill End`}
                 </PreLine>
                 <Text {...texts.subtitle}>A 4x4 Adventure</Text>
@@ -213,8 +213,8 @@ const texts = {
     color: 'white',
     fontFamily: 'heading',
     fontWeight: 'medium',
-    fontSize: {base:'55px', sm: '62px', wide: '124px'},
-    lineHeight: {base: '55px', sm: '62px', wide: '124px'},
+    fontSize: {base:'55px', sm: '62px', d:'80px', wide: '118px'},
+    lineHeight: {base: '55px', sm: '62px', d:'80px', wide: '118px'},
   },
   subtitle: {
     color: 'white',

@@ -19,8 +19,8 @@ const nextConfig = {
     appMeta: {
       canonical: 'https://brandedcontent.smh.com.au/ford/built-last', // https://brandedcontent.[masthead].com.au/xxx/xxx"
       brand: 'Ford', // e.g Black Hawk
-      title: 'Built to last', // e.g Being a good pet parent starts at mealtime
-      description: 'It’s only 185 kilometres from Sydney but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.',
+      title: 'Exploring hill end: A 4x4 adventure', // e.g Being a good pet parent starts at mealtime
+      description: 'The Hill End region is only a half-day’s drive from Sydney or Canberra, but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.',
       siteName: 'The Sydney Morning Herald', // The Sydney Morning Herald, Good Food
       icon: 'smh', // smh, goodfood, nine, afr, traveller
       themeColour: '#000D5C', // hex
