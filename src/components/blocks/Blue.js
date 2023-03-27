@@ -39,7 +39,7 @@ export default function Blue() {
               <AspectRatio w='full' ratio={709/479}>
                 <Jarallax imgSize='cover' speed={1.06}>
                   <Figure >
-                  <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
+                    <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
                   </Figure>
                 </Jarallax>
               </AspectRatio>

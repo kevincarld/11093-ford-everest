@@ -51,7 +51,6 @@ export default function MastheadProvider({children}) {
 
         {children}
 
-      <footer></footer>
     </Box>
   )
 }

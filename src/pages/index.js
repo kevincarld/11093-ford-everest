@@ -19,7 +19,7 @@ export default function Home() {
     // TODO: add accent lines
 
     <Layout>
-      <Box bg='' pb='54px'>
+      <Box bg='' pb={{lg:'54px'}}>
         <Hero />
 
         <Intro />
