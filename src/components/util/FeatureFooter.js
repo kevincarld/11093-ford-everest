@@ -6,7 +6,7 @@ export default function FeatureFooter({svg, href, ...rest}) {
   return (
     <Box
       display='flex' flexDir='column' alignItems='center' justifyContent="center"
-      pos='absolute' bottom='15px' left='0' right='0' zIndex={30}
+      pos='absolute' bottom='15px' left='0' right='0' zIndex={90}
       {...rest}
     >
       <Text sx={{
