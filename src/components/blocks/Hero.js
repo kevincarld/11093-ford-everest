@@ -106,7 +106,7 @@ export default function Hero() {
       </Box>
 
       {/* middle box */}
-      <Box pos='absolute' inset='110px 0 0 0' maxW={{base: '480px', lg: '90%', hd: '1647px'}} mr={{base: 'auto'}} ml={{md:'auto'}}>
+      <Box pos='absolute' inset='110px 0 0 0' maxW={{base: '480px', lg: '90%', hd: '1647px'}} mr={{base: 'auto'}} ml={{md:'auto'}} maxH='820px'>
         <Box ref={slider2Ref} pos='relative' className="swiper-container slider2" w={{base: '95%', md: 'full'}}   overflow='hidden'>
           <Box className="swiper-wrapper">
             <SwiperSlide className='swiper-slide' >

@@ -36,21 +36,13 @@ export default function Blue() {
 
           <GridItem>
             <Flex pt={{base:'38px', md:'58px'}} mr={{wide:'-140px'}} direction='column' gap={{base:'6px', wide: '29px'}}>
-              <AspectRatio w='full' ratio={709/479}>
-                <Jarallax imgSize='cover' speed={1.06}>
                   <Figure >
-                    <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
+                    <Img  dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
                   </Figure>
-                </Jarallax>
-              </AspectRatio>
 
-              <AspectRatio w='full' ratio={709/574}>
-                <Jarallax imgSize='cover' speed={1.06}>
                   <Figure >
-                  <Img className="jarallax-img" dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/blue-2.jpg'} />
+                  <Img  dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/blue-2.jpg'} />
                   </Figure>
-                </Jarallax>
-              </AspectRatio>
 
             </Flex>
           </GridItem>

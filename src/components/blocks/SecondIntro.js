@@ -32,19 +32,11 @@ export default function SecondIntro() {
 
         <GridItem pr={{lg: '40px'}}>
           <VStack alignItems={'flex-end'} pr={{wide: '60px'}}>
-            <AspectRatio w='full' ratio={949/1049} mb={{base: '5px', lg: '35px'}}>
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Figure >
-                  <Img className="jarallax-img" dimension='949x1049' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-1.jpg' alt='man chilling next to his ford everest' />
+                <Figure mb={{base: '5px', lg: '35px'}}>
+                  <Img  dimension='949x1049' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-1.jpg' alt='man chilling next to his ford everest' />
                 </Figure>
-              </Jarallax>
-            </AspectRatio>
 
-            <AspectRatio w='full' ratio={868/481} mb={{base: '5px', lg: '35px'}}>
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Img className="jarallax-img" dimension='868x481' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-2.jpg' alt='man getting something out of his ford everest trunk' />
-              </Jarallax>
-            </AspectRatio>
+                <Img dimension='868x481' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-2.jpg' alt='man getting something out of his ford everest trunk' />
           </VStack>
         </GridItem>
       </Grid>

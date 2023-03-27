@@ -31,17 +31,9 @@ export default function Travel() {
 
           <GridItem>
             <Flex mr={{wide:'-140px'}} direction='column' gap={{base:'6px', wide: '29px'}}>
-              <AspectRatio w='full' ratio={709/479}>
-                <Jarallax imgSize='cover' speed={1.06}>
-                  <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/travel-1.jpg'} />
-                </Jarallax>
-              </AspectRatio>
+                  <Img  dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/travel-1.jpg'} />
 
-              <AspectRatio w='full' ratio={709/574}>
-                <Jarallax imgSize='cover' speed={1.06}>
-                  <Img className="jarallax-img" dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/travel-2.jpg'} />
-                </Jarallax>
-              </AspectRatio>
+                  <Img  dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/travel-2.jpg'} />
             </Flex>
           </GridItem>
         </Grid>

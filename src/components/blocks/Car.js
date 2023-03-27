@@ -37,13 +37,9 @@ export default function Car() {
               <Img dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
             </Figure> */}
 
-            <AspectRatio w='full' ratio={440/502} maxW='440px' mb='40px' ml={{base: '60px', wide:'100px'}}>
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Figure >
-                <Img className="jarallax-img" dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
+                <Figure maxW='440px' mb='40px' ml={{base: '60px', wide:'100px'}}>
+                <Img  dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
                 </Figure>
-              </Jarallax>
-            </AspectRatio>
           </GridItem>
 
         </Grid>

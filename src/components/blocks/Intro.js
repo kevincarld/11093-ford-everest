@@ -43,23 +43,13 @@ export default function Intro() {
           </GridItem>
 
           <GridItem pos='relative' zIndex='10' pt={{lg: '220px',  wide:'380px', hd:"420px"}}  mr={{wide: '-40%', hd: '-250px'}}>
-            <AspectRatio ratio={709/500} mb={{base: '5px', lg: '30px'}}>
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Figure>
-                  <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' alt='ford everest with driver outside its window' src={'./images/intro-1.jpg'} />
-                </Figure>
-              </Jarallax>
-            </AspectRatio>
+            <Figure mb={{base: '5px', lg: '30px'}}>
+              <Img  dimension='709x479' w={{base: 'full'}} fit='cover' alt='ford everest with driver outside its window' src={'./images/intro-1.jpg'} />
+            </Figure>
 
-
-
-            <AspectRatio ratio={709/479} >
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Figure>
-                  <Img className="jarallax-img" dimension='709x574' w={{base: 'full'}} fit='cover' alt='ford everest driving through river' src={'./images/intro-2.jpg'} />
-                </Figure>
-              </Jarallax>
-            </AspectRatio>
+            <Figure>
+              <Img  dimension='709x574' w={{base: 'full'}} fit='cover' alt='ford everest driving through river' src={'./images/intro-2.jpg'} />
+            </Figure>
 
           </GridItem>
         </Grid>

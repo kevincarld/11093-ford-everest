@@ -28,23 +28,12 @@ export default function Drive() {
 
         <GridItem mr={{wide: '-150px', hd: '-320px'}} ml={{ wide: '-20px'}}>
           <Grid gap={{ base:'6px', lg: '13px' }} templateColumns={{ wide:'9.5fr 2.5fr' }}>
-            <AspectRatio w='full' ratio={800/452} >
-              <Jarallax imgSize='cover' speed={1.06}>
                 <Figure >
-                <Img className="jarallax-img" dimension='800x452' w={{base: 'full'}} fit='cover' src={'./images/drive-1.jpg'} mock='drive-1' />
+                <Img dimension='800x452' w={{base: 'full'}} fit='cover' src={'./images/drive-1.jpg'} mock='drive-1' />
 
-                {/* <Img  dimension='800x452' src={'./images/car-2.jpg'} alt='ford everent through the dust' /> */}
                 </Figure>
-              </Jarallax>
-            </AspectRatio>
 
-            <AspectRatio w='full' ratio={375/225} >
-              <Jarallax imgSize='cover' speed={1.06}>
-                <Figure >
-                <Img className="jarallax-img" dimension='375x225' w={{base: 'full'}} fit='cover' src={'./images/drive-2-mob.jpg'} mock='drive-2-mob' />
-                </Figure>
-              </Jarallax>
-            </AspectRatio>
+                <Img h="full" dimension='375x225' w={{base: 'full'}} fit='cover' src={'./images/drive-2-mob.jpg'} mock='drive-2-mob' />
 
 
           </Grid>
