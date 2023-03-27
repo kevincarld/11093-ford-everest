@@ -25,6 +25,12 @@ export const ButtonStyles = {
       pl: '50px',
       pr: '50px',
       borderRadius: '9999px',
+    },
+    base: {
+      minW: 'auto',
+      minH: 'auto',
+      h: 'auto',
+      p:  0,
     }
   },
 

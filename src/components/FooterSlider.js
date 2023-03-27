@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem, Flex, AspectRatio,
+import { Box, Text, Button, Link, Image, Grid, GridItem, Flex, AspectRatio,Center,
   //drawer
   useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerBody
 } from '@chakra-ui/react'
@@ -97,32 +97,70 @@ const Car = ({car}) => {
     Rating`, content: 'with safety features such as smart driver assistance technology, road-edge and blind-spot detection, and reverse break assist.'},
   ]
 
+  const btnPosition = [
+    {base: '14% 10px auto auto', md: '22% 20px auto auto'}, {}, //1
+    {base: '25% 25% auto auto', md: '22% 200px auto auto'}, //3
+    {base: '20% 20% auto auto', md: '22% 120px auto auto'}, {}, //4
+    {base: '20% 10px auto auto', md: '30% 10px auto auto'},  //6
+    {base: '20% auto auto 25%', md: '15% auto auto 200px'}, {}, {}, //7
+    {base: '8% 0px auto auto', md: '22% 0px auto auto'} //10
+  ]
+
   return (
     <Box pos='relative'>
 
-      <Button onClick={withContent.includes(car) ? onOpen : null}>
-        <svg width="32" height="32" viewBox="0 0 32 32">
-          <defs>
-            <clipPath id="clip-path">
-              <rect id="mask" width="32" height="32" rx="16" transform="translate(1396 6811.999)" fill="#fff" stroke="#b5b2a5" stroke-width="1"/>
-            </clipPath>
-          </defs>
-          <g id="V6_ENGINE" data-name="V6 ENGINE" transform="translate(1428 6843.999) rotate(180)">
-            <g id="Mask_Group_63" data-name="Mask Group 63" clip-path="url(#clip-path)">
-              <rect id="white_circl" data-name="white circl" width="196" height="32" rx="16" transform="translate(1232 6812)" fill="#fff"/>
-              <text id="RESPONSIVE_V6_ENGINE" data-name="RESPONSIVE V6 ENGINE" transform="translate(1298 6823) rotate(-180)" fill="#fff" font-size="14" font-family="FordAntenna-Medium, Ford Antenna" font-weight="500" opacity="0.996"><tspan x="-89.95" y="0">RESPONSIVE V6 ENGINE</tspan></text>
-              <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1400 6815.999)" fill="#00095b"/>
-              <path id="Path_13979" data-name="Path 13979" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1418 6827.999) rotate(90)" fill="#fff"/>
-              <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1412 6821.998)" fill="#fff"/>
-            </g>
-          </g>
-        </svg>
-      </Button>
+      {/* modal button */}
+      {withContent.includes(car) &&
+        <Button
+          variant='base'
+          onClick={onOpen}
+          pos='absolute'
+          zIndex={10}
+          inset={{...btnPosition[car-1]}}
+          borderRadius='9999px'
+          bg='white'
+          overflow='hidden'
+          sx={{
+            '@media(hover: hover)': {
+              '&:hover': {
+              }
+            }
+          }}
+        >
+          <Box className='icon'>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <g id="Group_6957" data-name="Group 6957" transform="translate(-1400 -6815.998)">
+                <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1400 6815.998)" fill="#00095b"/>
+                <path id="Path_13979" data-name="Path 13979" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1418 6827.998) rotate(90)" fill="#fff"/>
+                <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1412 6821.997)" fill="#fff"/>
+              </g>
+            </svg>
+          </Box>
+
+          {/* <Text className='txt' as='span' display={'flex'} textTransform={'uppercase'} fontSize='14px' lineHeight={'28px'} fontWeight='medium'>
+            {carTexts[car-1].title}
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g id="Group_6957" data-name="Group 6957" transform="translate(-1189 -6815.998)">
+                <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1189 6815.998)" fill="#fff"/>
+                <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1207 6827.997) rotate(90)" fill="#00095b"/>
+              </g>
+            </svg>
+          </Text> */}
+
+        </Button>
+      }
 
       <AspectRatio mx='auto' minW={{base: '90vw', md: '636px'}} ratio={636/390}>
         <>
           {car}
-          <Img w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/${car}.png`} />
+          {car === 1 &&
+            <Box>
+              <Img dimension='69x69' w='69px' h='69px' src='./images/360.png' draggable='false' opacity='.75' zIndex={10} pos='relative' />
+            </Box>
+          }
+
+          <Img w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/${car}.png`} draggable='false' />
+
         </>
       </AspectRatio>
 
