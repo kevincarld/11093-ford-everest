@@ -178,7 +178,16 @@ const Car = ({car}) => {
             </Box>
           }
 
-          <Img w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/${car}.png`} draggable='false' />
+          <Img visibility={car == 1 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/1.png`} draggable='false' />
+          <Img visibility={car == 2 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/2.png`} draggable='false' />
+          <Img visibility={car == 3 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/3.png`} draggable='false' />
+          <Img visibility={car == 4 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/4.png`} draggable='false' />
+          <Img visibility={car == 5 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/5.png`} draggable='false' />
+          <Img visibility={car == 6 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/6.png`} draggable='false' />
+          <Img visibility={car == 7 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/7.png`} draggable='false' />
+          <Img visibility={car == 8 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/8.png`} draggable='false' />
+          <Img visibility={car == 9 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/9.png`} draggable='false' />
+          <Img visibility={car == 10 ? 'visible': 'hidden'} w='full' h='full' fit='contain!important' dimension='663x390' src={`./images/slider/10.png`} draggable='false' />
 
         </>
       </AspectRatio>
