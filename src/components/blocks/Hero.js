@@ -78,7 +78,7 @@ export default function Hero() {
         opacity: 0.45,
       }
     }}>
-      <FeatureHeader href='#'/>
+      <FeatureHeader href='https://www.ford.com.au/showroom/future-vehicle/next-gen-everest/'/>
       {/* cover */}
       <Box ref={slider1Ref} className="swiper-container slider1" h={{base: '840px', lg: '900px', wide: '1105px'}} overflow='hidden'>
         <Box as={motion.div} className="swiper-wrapper"

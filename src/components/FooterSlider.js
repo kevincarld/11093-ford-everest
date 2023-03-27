@@ -239,7 +239,7 @@ const Car = ({car}) => {
                 {carTexts[car-1].content}
               </Text>
 
-              <Button variant='round' mt='10px' border='1px solid white'>Find out more</Button>
+              <Button as={Link} target='_blank' referrer='noreferrer sponsored' href='https://www.ford.com.au/showroom/future-vehicle/next-gen-everest/' _hover={{textDecor: 'none'}} variant='round' mt='10px' border='1px solid white'>Find out more</Button>
             </Box>
           </DrawerBody>
         </DrawerContent>

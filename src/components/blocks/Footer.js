@@ -44,11 +44,11 @@ export default function Footer() {
 
         <FooterSlider />
 
-        <Button mt={{base: '40px', lg: '50px'}} variant={'round'}>Find out more</Button>
+        <Button as={Link} target='_blank' referrer='noreferrer sponsored' href='https://www.ford.com.au/showroom/future-vehicle/next-gen-everest/' _hover={{textDecor: 'none'}} mt={{base: '40px', lg: '50px'}} variant={'round'}>Find out more</Button>
 
       </Box>
 
-      <FeatureFooter href='#'/>
+      <FeatureFooter href='https://www.ford.com.au/showroom/future-vehicle/next-gen-everest/'/>
     </Box>
   )
 }
