@@ -9,6 +9,7 @@ import { mock } from 'utils/common'
 import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
+import { useResponsive } from 'utils/common'
 
 export default function FooterSlider() {
   const [car, setCar] = useState(1)
@@ -71,6 +72,7 @@ export default function FooterSlider() {
 
 /////////////////// CAR and buttons //////////////////////
 const Car = ({car}) => {
+  const isLg = useResponsive('up', 'lg')
   const { isOpen, onOpen, onClose } = useDisclosure()
   const withContent = [1,3,4,6,7,10]
 
@@ -166,27 +168,30 @@ const Car = ({car}) => {
 
 
 
-      <Drawer onClose={onClose} isOpen={isOpen} size='xl' >
+      <Drawer onClose={onClose} isOpen={isOpen} size='xl' placement={isLg ? 'right' : 'bottom'}>
         <DrawerOverlay bg='rgba(255,255,255,0.7)' backdropFilter={'blur(5px)'}/>
 
         <DrawerContent
           bgColor='transparent'
           boxShadow='none'
-          bgImage={'./bg/drawer-bg.png'}
+          bgImage={{base:'./bg/drawer-bg-mob.png', lg:'./bg/drawer-bg.png'}}
           bgSize='cover'
           bgRepeat='no-repeat'
           justifyContent={'flex-end'}
+          top={{base: '15%!important', lg: '0!important'}}
         >
           <DrawerBody
             display='flex'
-            alignItems={'center'}
-            maxW='60%'
+            alignItems={{base: 'flex-start', lg:'center'}}
+            justifyContent={'center'}
+            maxW={{base: '100%',lg: '60%'}}
             ml='auto'
             color='white'
+            w={{base: '100%', lg: '60%'}}
           >
-            <Box pr={{lg: '75px'}}>
-              <Flex mb='80px' pos='relative' right='-50px'>
-                <Button onClick={onClose} aria-label='close modal' ml='auto'>
+            <Box pt={{base: '150px', md: '200px', lg: 0}} pr={{lg: '75px'}}>
+              <Flex mb='80px' pos='relative' right={{base: 0, lg:'-50px'}}>
+                <Button onClick={onClose} aria-label='close modal' ml='auto' transform={{base: 'scale(1.5)'}}>
                   <svg width="33.941" height="33.941" viewBox="0 0 33.941 33.941">
                     <g id="X" transform="translate(-1795.03 -9942.032)">
                       <g id="Ellipse_27" data-name="Ellipse 27" transform="translate(1812 9975.974) rotate(-135)" fill="none" stroke="#fff" stroke-width="1">
@@ -208,7 +213,7 @@ const Car = ({car}) => {
                 {carTexts[car-1].content}
               </Text>
 
-              <Button>Find out more</Button>
+              <Button variant='round' mt='10px' border='1px solid white'>Find out more</Button>
             </Box>
           </DrawerBody>
         </DrawerContent>
