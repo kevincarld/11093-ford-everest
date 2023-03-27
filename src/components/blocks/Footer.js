@@ -11,7 +11,7 @@ import FooterSlider from 'components/FooterSlider'
 export default function Footer() {
 
   return (
-    <Box px={{base: '20px'}} textAlign='center'>
+    <Box py={{base: '100px', d:'150px'}} px={{base: '20px'}} textAlign='center'>
       <Text as='h2' {...texts.title}>Built to last</Text>
       <PreLine display={{base: 'block', lg: 'none'}} {...texts.subtitle}>
         {`Click on the various hotspots to find

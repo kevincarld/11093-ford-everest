@@ -20,7 +20,7 @@ export default function Home() {
 
     <Layout>
       <Box bg='' overflow='hidden'>
-        {/* <Hero />
+        <Hero />
 
         <Intro />
 
@@ -36,7 +36,7 @@ export default function Home() {
 
         <Travel />
 
-        <Video /> */}
+        <Video />
 
         <Footer />
 

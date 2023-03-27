@@ -13,7 +13,7 @@ export const ButtonStyles = {
   // styles for different visual variants ("outline", "solid")
   variants: {
     round: {
-      bg: 'primary',
+      bg: 'cta',
       color: 'white',
       fontFamily: 'alt',
       fontWeight: 'light',
@@ -25,6 +25,9 @@ export const ButtonStyles = {
       pl: '50px',
       pr: '50px',
       borderRadius: '9999px',
+      _hover: {
+        opacity: '.95'
+      }
     },
     base: {
       minW: 'auto',
