@@ -13,6 +13,7 @@ import Swiper from "swiper";
 import { Navigation, Autoplay, Mousewheel, Controller } from "swiper";
 //
 import { motion } from "framer-motion";
+import FeatureHeader from 'components/util/FeatureHeader'
 
 export default function Hero() {
   const navigationPrevRef = React.useRef(null)
@@ -73,7 +74,7 @@ export default function Hero() {
 
   return (
     <Box pos='relative' >
-
+      <FeatureHeader href='#'/>
       {/* cover */}
       <Box ref={slider1Ref} className="swiper-container slider1" h={{base: '840px', lg: '900px', wide: '1105px'}} overflow='hidden'>
         <Box className="swiper-wrapper">
@@ -90,7 +91,7 @@ export default function Hero() {
       </Box>
 
       {/* middle box */}
-      <Box pos='absolute' inset='100px 0 0 0' maxW={{base: '480px', lg: '90%', hd: '1647px'}} mr={{base: 'auto'}} ml={{md:'auto'}}>
+      <Box pos='absolute' inset='110px 0 0 0' maxW={{base: '480px', lg: '90%', hd: '1647px'}} mr={{base: 'auto'}} ml={{md:'auto'}}>
         <Box ref={slider2Ref} pos='relative' className="swiper-container slider2" w={{base: '95%', md: 'full'}}   overflow='hidden'>
           <Box className="swiper-wrapper">
             <SwiperSlide className='swiper-slide' >
