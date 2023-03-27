@@ -1,16 +1,18 @@
 import React from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem, Flex, VStack } from '@chakra-ui/react'
+import { Box, Text, Button, Link, Image, Grid, AspectRatio, GridItem, Flex, VStack } from '@chakra-ui/react'
 import PreLine from 'components/util/PreLine'
 import NineLink from 'components/util/NineLink'
 import { mock } from 'utils/common'
 import Container from '../util/Container'
 import Img from '../util/Img'
 import Figure from 'components/util/Figure'
+import dynamic from 'next/dynamic'
+const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
 
 export default function SecondIntro() {
 
   return (
-    <Box pos='relative' zIndex={2} pt={{base: '100px'}} overflow={{base: 'hidden', lg: 'initial'}} mt={{lg: '-600px',  wide: '-700px', hd: '-850px'}}>
+    <Box pos='relative' zIndex={2} pt={{base: '100px'}} overflow={{base: 'hidden', lg: 'initial'}} mt={{lg: '-550px',  wide: '-700px', hd: '-850px'}}>
       <Grid templateColumns={{lg: '1fr 1fr', wide: '8fr 4fr'}} maxW='1604px' mx='auto' >
         <GridItem order={{lg: 1}}>
           <Box pos='relative' p={{base: '0 20px 26px'}} pl={{wide:0}} mt={{lg: '550px', d: '650px', wide: '750px', hd: '1000px'}}>
@@ -30,10 +32,19 @@ export default function SecondIntro() {
 
         <GridItem pr={{lg: '40px'}}>
           <VStack alignItems={'flex-end'} pr={{wide: '60px'}}>
-            <Figure mb={{base: '5px', lg: '35px'}}>
-              <Img dimension='949x1049' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-1.jpg' alt='man chilling next to his ford everest' />
-            </Figure>
-            <Img dimension='868x481' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-2.jpg' alt='man getting something out of his ford everest trunk' />
+            <AspectRatio w='full' ratio={949/1049} mb={{base: '5px', lg: '35px'}}>
+              <Jarallax imgSize='cover' speed={1.06}>
+                <Figure >
+                  <Img className="jarallax-img" dimension='949x1049' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-1.jpg' alt='man chilling next to his ford everest' />
+                </Figure>
+              </Jarallax>
+            </AspectRatio>
+
+            <AspectRatio w='full' ratio={868/481} mb={{base: '5px', lg: '35px'}}>
+              <Jarallax imgSize='cover' speed={1.06}>
+                <Img className="jarallax-img" dimension='868x481' w={{base:'full', lg: 'auto'}} fit='cover' src='./images/sintro-2.jpg' alt='man getting something out of his ford everest trunk' />
+              </Jarallax>
+            </AspectRatio>
           </VStack>
         </GridItem>
       </Grid>

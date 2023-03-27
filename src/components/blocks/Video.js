@@ -16,7 +16,8 @@ export default function Video() {
           {/* :Line */}
           <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt={{ base: '30px', lg: '60px', hd: '120px'}} mb='30px'></Box>
 
-          <PreLine maxW={{lg: '505px'}} textStyle='body' children={
+          <PreLine maxW={{lg: '505px'}} textStyle='body'>
+          {
             `Another great way to spend a day is on a three-or-four-hour drive to Sofala, which is still on the Turon River. You’ll meander across private properties where cows and horses play. Then low ranges take over where you can test your skills on steep ascents and descents – occasionally in reverse should you encounter an oncoming vehicle on the narrow tracks.
 
             19th century gold mining town Sofala is a quaint place for a leg-stretch, and has an old pub and several cafés that offer a break from the campfire, plus a playground where the kids can run off some energy.
@@ -25,7 +26,8 @@ export default function Video() {
 
             You can camp at Glendora campground or in one of Hill End’s surrounding bush-camping sites. Next day you can test the Ford Everest’s toughness and performance all over again in this region where family adventure awaits.
             `
-          }/>
+          }
+          </PreLine>
         </GridItem>
 
         <GridItem order={{ lg:'-1' }} ml={{wide: '-100px', hd: '-200px'}}>

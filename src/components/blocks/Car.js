@@ -1,11 +1,14 @@
 import React from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem } from '@chakra-ui/react'
+import { Box, Text, Button, Link, Image, Grid, GridItem, AspectRatio } from '@chakra-ui/react'
 import PreLine from 'components/util/PreLine'
 import NineLink from 'components/util/NineLink'
 import { mock } from 'utils/common'
 import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
+import dynamic from 'next/dynamic'
+const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
+
 export default function Car() {
 
   return (
@@ -30,9 +33,17 @@ export default function Car() {
             gridColumn={{lg: '7 / 12', wide: '8 / 13'}}
             gridRow='1'
           >
-            <Figure pl={{base: '60px', wide:'100px'}}>
+            {/* <Figure pl={{base: '60px', wide:'100px'}}>
               <Img dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
-            </Figure>
+            </Figure> */}
+
+            <AspectRatio w='full' ratio={440/502} maxW='440px' mb='40px' ml={{base: '60px', wide:'100px'}}>
+              <Jarallax imgSize='cover' speed={1.06}>
+                <Figure >
+                <Img className="jarallax-img" dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
+                </Figure>
+              </Jarallax>
+            </AspectRatio>
           </GridItem>
 
         </Grid>

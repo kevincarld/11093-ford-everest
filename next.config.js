@@ -29,7 +29,7 @@ const nextConfig = {
       year: '2023' // e.g 2023
     },
     jobCode: '11093-ford', // used for nine ga scripts
-    guidelines: true, // shows or hides layout guideline bars
+    guidelines: false, // shows or hides layout guideline bars
     activateMasthead: true, // shows or hides masthead
     mastheadOverride: 'smh', // overrides masthead that's pulling from hostname: e.g honey,style,travel,kitchen,you,parenting,coach,pets,celebrity
   }

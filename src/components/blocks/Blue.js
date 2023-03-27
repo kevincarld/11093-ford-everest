@@ -1,10 +1,12 @@
 import React from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem, Flex } from '@chakra-ui/react'
+import { Box, Text, Button, Link, Image, Grid, GridItem, AspectRatio, Flex } from '@chakra-ui/react'
 import PreLine from 'components/util/PreLine'
 import { mock } from 'utils/common'
 import Container from '../util/Container'
 import Img from '../util/Img'
 import Figure from 'components/util/Figure'
+import dynamic from 'next/dynamic'
+const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
 
 export default function Blue() {
 
@@ -34,8 +36,22 @@ export default function Blue() {
 
           <GridItem>
             <Flex pt={{base:'38px', md:'58px'}} mr={{wide:'-140px'}} direction='column' gap={{base:'6px', wide: '29px'}}>
-              <Img dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
-              <Img dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/blue-2.jpg'} />
+              <AspectRatio w='full' ratio={709/479}>
+                <Jarallax imgSize='cover' speed={1.06}>
+                  <Figure >
+                  <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/blue-1.jpg'} />
+                  </Figure>
+                </Jarallax>
+              </AspectRatio>
+
+              <AspectRatio w='full' ratio={709/574}>
+                <Jarallax imgSize='cover' speed={1.06}>
+                  <Figure >
+                  <Img className="jarallax-img" dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/blue-2.jpg'} />
+                  </Figure>
+                </Jarallax>
+              </AspectRatio>
+
             </Flex>
           </GridItem>
         </Grid>
@@ -58,7 +74,8 @@ export default function Blue() {
         </GridItem>
 
         <GridItem order={{lg:'-1'}} >
-          <Figure mt={{wide: '-140px',}}>
+          <Figure  mt={{wide: '-140px',}}>
+
             <Img
               pos='relative'
               zIndex='50'

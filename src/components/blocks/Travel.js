@@ -1,10 +1,12 @@
 import React from 'react'
-import { Box, Text, Button, Link, Image, Grid, GridItem, Flex } from '@chakra-ui/react'
+import { Box, Text, Button, Link, Image, Grid, AspectRatio, GridItem, Flex } from '@chakra-ui/react'
 import PreLine from 'components/util/PreLine'
 import { mock } from 'utils/common'
 import Container from '../util/Container'
 import Img from '../util/Img'
 import Figure from 'components/util/Figure'
+import dynamic from 'next/dynamic'
+const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
 
 export default function Travel() {
 
@@ -19,17 +21,27 @@ export default function Travel() {
             <Text maxW='500px' {...texts.heading} >
               The main 4WD track also follows the river, crossing back and forwards for some dramatic splashes.
             </Text>
-            <PreLine color='black' textStyle='body' maxW={{d: '505px'}} children={
-              `Minor tracks branch off, although they’re best avoided after heavy rain. You’ll come across ruined buildings such as the corrugated-iron River Ron’s Hut, and the remains of water races built by early Chinese immigrants.
+            <PreLine color='black' textStyle='body' maxW={{d: '505px'}}>
+              { `Minor tracks branch off, although they’re best avoided after heavy rain. You’ll come across ruined buildings such as the corrugated-iron River Ron’s Hut, and the remains of water races built by early Chinese immigrants.
 
               The steepest 4WD track takes you up Pinnacle Rock, an outcrop of sandstone. Fortunately, the Ford Everest’s sturdy chassis, wider track and suspension tuning offers a balanced performance whether you’re on a highway or on the roughest track.`
-            }/>
+              }
+            </PreLine>
           </GridItem>
 
           <GridItem>
             <Flex mr={{wide:'-140px'}} direction='column' gap={{base:'6px', wide: '29px'}}>
-              <Img dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/travel-1.jpg'} />
-              <Img dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/travel-2.jpg'} />
+              <AspectRatio w='full' ratio={709/479}>
+                <Jarallax imgSize='cover' speed={1.06}>
+                  <Img className="jarallax-img" dimension='709x479' w={{base: 'full'}} fit='cover' src={'./images/travel-1.jpg'} />
+                </Jarallax>
+              </AspectRatio>
+
+              <AspectRatio w='full' ratio={709/574}>
+                <Jarallax imgSize='cover' speed={1.06}>
+                  <Img className="jarallax-img" dimension='709x574' w={{base: 'full'}} fit='cover' src={'./images/travel-2.jpg'} />
+                </Jarallax>
+              </AspectRatio>
             </Flex>
           </GridItem>
         </Grid>

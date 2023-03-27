@@ -5,6 +5,8 @@ import { mock } from 'utils/common'
 import Container from '../util/Container'
 import Img from '../util/Img'
 import Figure from 'components/util/Figure'
+import dynamic from 'next/dynamic'
+const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
 
 export default function Camping() {
 
@@ -12,7 +14,9 @@ export default function Camping() {
     <Flex pos='relative' zIndex={4} direction={{base:'column', lg:'row'}} justify='end'>
 
       <AspectRatio w='full' minH={{lg: '791px'}} ratio={{base: 375/225, lg: 1760/791}}>
-        <Img dimension='1760x791'  w={{base: 'full'}} fit='cover' src='./images/camping.jpg' />
+        <Jarallax imgSize='cover' speed={1.11}>
+          <Img className="jarallax-img" dimension='1760x791'  w={{base: 'full'}} fit='cover' src='./images/camping.jpg' />
+        </Jarallax>
       </AspectRatio>
 
       <Container pos={{base:'relative', lg: 'absolute'}}  zIndex='3' top='0' right='0'>
