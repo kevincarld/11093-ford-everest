@@ -93,7 +93,7 @@ export default function Hero() {
             }
           }}
         >
-          <SwiperSlide as={motion.div} className='swiper-slide' >
+          <SwiperSlide className='swiper-slide' >
             <Image fit='cover' h='full' w='full' src={'./images/back-3.jpg'} objectPosition={{base: '36%', lg: 'center'}}/>
           </SwiperSlide>
           <SwiperSlide className='swiper-slide' >
@@ -110,13 +110,16 @@ export default function Hero() {
         <Box ref={slider2Ref} pos='relative' className="swiper-container slider2" w={{base: '95%', md: 'full'}}   overflow='hidden'>
           <Box className="swiper-wrapper">
             <SwiperSlide className='swiper-slide' >
-              <Image as={motion.img} variants={animation_zoom} initial='hide' animate='zoom' fit='cover' w='full'  src={`./images/hero-a${isLg ? '-lg' : ''}.jpg`} />
+              <Image display={{base: 'none', lg: 'block'}} as={motion.img} variants={animation_zoom} initial='hide' animate='zoom' fit='cover' w='full'  src={`./images/hero-a-lg.jpg`} />
+              <Image display={{base: 'block', lg: 'none'}} as={motion.img} variants={animation_zoom} initial='hide' animate='zoom' fit='cover' w='full'  src={`./images/hero-a.jpg`} />
             </SwiperSlide>
             <SwiperSlide className='swiper-slide' >
-              <Image fit='cover' w='full' src={`./images/hero-b${isLg ? '-lg' : ''}.jpg`} />
+              <Image display={{base: 'none', lg: 'block'}}  fit='cover' w='full'  src={`./images/hero-b-lg.jpg`} />
+              <Image display={{base: 'block', lg: 'none'}}  fit='cover' w='full'  src={`./images/hero-b.jpg`} />
             </SwiperSlide>
             <SwiperSlide className='swiper-slide' >
-              <Image fit='cover' w='full' src={`./images/hero-c${isLg ? '-lg' : ''}.jpg`} />
+              <Image display={{base: 'none', lg: 'block'}}  fit='cover' w='full'  src={`./images/hero-c-lg.jpg`} />
+              <Image display={{base: 'block', lg: 'none'}}  fit='cover' w='full'  src={`./images/hero-c.jpg`} />
             </SwiperSlide>
           </Box>
         </Box>
