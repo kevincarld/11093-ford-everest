@@ -10,6 +10,8 @@ import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
 import { useResponsive } from 'utils/common'
+import { motion } from 'framer-motion'
+import {animation_shaker} from 'utils/motion'
 
 export default function FooterSlider() {
   const [car, setCar] = useState(1)
@@ -100,12 +102,12 @@ const Car = ({car}) => {
   ]
 
   const btnPosition = [
-    {base: '14% 10px auto auto', md: '22% 20px auto auto'}, {}, //1
-    {base: '25% 25% auto auto', md: '22% 200px auto auto'}, //3
-    {base: '20% 20% auto auto', md: '22% 120px auto auto'}, {}, //4
-    {base: '20% 10px auto auto', md: '30% 10px auto auto'},  //6
-    {base: '20% auto auto 25%', md: '15% auto auto 200px'}, {}, {}, //7
-    {base: '8% 0px auto auto', md: '22% 0px auto auto'} //10
+    {base: '14% 10px auto auto', wide: '22% -180px auto auto'}, {}, //1
+    {base: '25% 25% auto auto', wide: '22% -150px auto auto'}, //3
+    {base: '20% 20% auto auto', wide: '22% -40px auto auto'}, {}, //4
+    {base: '20% 10px auto auto', wide: '30% -370px auto auto'},  //6
+    {base: '20% auto auto 25%', wide: '15% auto auto 200px'}, {}, {}, //7
+    {base: '8% 0px auto auto', wide: '22% -280px auto auto'} //10
   ]
 
   return (
@@ -113,48 +115,63 @@ const Car = ({car}) => {
 
       {/* modal button */}
       {withContent.includes(car) &&
-        <Button
-          variant='base'
-          onClick={onOpen}
-          pos='absolute'
-          zIndex={10}
-          inset={{...btnPosition[car-1]}}
-          borderRadius='9999px'
-          bg='white'
-          overflow='hidden'
-          sx={{
-            '@media(hover: hover)': {
-              '&:hover': {
-              }
-            }
-          }}
-        >
-          <Box className='icon'>
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <g id="Group_6957" data-name="Group 6957" transform="translate(-1400 -6815.998)">
-                <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1400 6815.998)" fill="#00095b"/>
-                <path id="Path_13979" data-name="Path 13979" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1418 6827.998) rotate(90)" fill="#fff"/>
-                <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1412 6821.997)" fill="#fff"/>
-              </g>
-            </svg>
+
+          <Box
+            onClick={onOpen}
+            pos='absolute'
+            zIndex={10}
+            inset={{...btnPosition[car-1]}}
+            borderRadius='9999px'
+            p='5px 10px'
+            _hover={{ cursor: 'pointer'}}
+            sx={{
+              display: 'flex',
+              clipPath: 'polygon(0 0, 40px 0, 40px 100%, 0 100%)',
+              '@media(min-width: 1600px)': {
+                '@media(hover: hover)': {
+                  '&:hover': {
+                    bg:'primary',
+                    color: 'white',
+                    transition: 'all 0.4s ease',
+                    clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+                    cursor: 'pointer',
+
+                    '.icon': {
+                      opacity: '0',
+                      m: 0
+                    }
+                  }
+                }
+              },
+
+            }}
+          >
+            <Box mr='10px' as={motion.div} className='icon' variants={animation_shaker} whileInView='shake'>
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g id="Group_6957" data-name="Group 6957" transform="translate(-1400 -6815.998)">
+                  <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1400 6815.998)" fill="#00095b"/>
+                  <path id="Path_13979" data-name="Path 13979" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1418 6827.998) rotate(90)" fill="#fff"/>
+                  <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1412 6821.997)" fill="#fff"/>
+                </g>
+              </svg>
+            </Box>
+
+
+            <Text className='txt' gap='15px' as='span' display={{base: 'none', wide:'flex'}} textTransform={'uppercase'} fontSize='14px' lineHeight={'28px'} fontWeight='medium'>
+              {carTexts[car-1].title}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g id="Group_6957" data-name="Group 6957" transform="translate(-1189 -6815.998)">
+                  <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1189 6815.998)" fill="#fff"/>
+                  <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1207 6827.997) rotate(90)" fill="#00095b"/>
+                </g>
+              </svg>
+            </Text>
+
           </Box>
-
-          {/* <Text className='txt' as='span' display={'flex'} textTransform={'uppercase'} fontSize='14px' lineHeight={'28px'} fontWeight='medium'>
-            {carTexts[car-1].title}
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <g id="Group_6957" data-name="Group 6957" transform="translate(-1189 -6815.998)">
-                <circle id="Ellipse_27" data-name="Ellipse 27" cx="12" cy="12" r="12" transform="translate(1189 6815.998)" fill="#fff"/>
-                <path id="Path_139788" data-name="Path 139788" d="M0,13.25A1.25,1.25,0,0,1-1.25,12V0A1.25,1.25,0,0,1,0-1.25,1.25,1.25,0,0,1,1.25,0V12A1.25,1.25,0,0,1,0,13.25Z" transform="translate(1207 6827.997) rotate(90)" fill="#00095b"/>
-              </g>
-            </svg>
-          </Text> */}
-
-        </Button>
       }
 
       <AspectRatio mx='auto' minW={{base: '90vw', md: '636px'}} ratio={636/390}>
         <>
-          {car}
           {car === 1 &&
             <Box>
               <Img dimension='69x69' w='69px' h='69px' src='./images/360.png' draggable='false' opacity='.75' zIndex={10} pos='relative' />

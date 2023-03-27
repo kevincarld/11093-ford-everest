@@ -26,7 +26,7 @@ export const animation_clipper = {
 
 export const animation_shaker = {
   shake: {
-    x: [-10, 10, -10, 10, 0],
+    y: [-5, 5, -5, 5, 0],
     transition: {
       duration: 0.8,
     },
