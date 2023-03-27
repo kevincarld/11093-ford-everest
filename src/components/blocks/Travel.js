@@ -14,7 +14,7 @@ export default function Travel() {
     <Box pos='relative' {...texture.mask}>
      <Container pt={{ lg:'220px', d:'150px', wide:'230px', hd: '270px' }} pos='relative' zIndex='70'>
         <Grid templateColumns={{lg: '1.5fr 1fr'}} gap={{wide:'100px'}}>
-          <GridItem p={{base:'30px 20px 50px', lg:'0px 20px'}} pos='relative' top={{ wide: '-70px' }}>
+          <GridItem p={{base:'30px 20px 50px', lg:'0px 20px'}} pos='relative' top={{ wide: '-70px' }}  data-scroll data-scroll-speed='1'>
             {/* Line */}
             <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='25px'></Box>
 

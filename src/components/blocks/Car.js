@@ -23,7 +23,7 @@ export default function Car() {
             alignItems='flex-end'
             zIndex={1}
           >
-            <Figure ml={{wide: '-100px'}}>
+            <Figure ml={{wide: '-100px'}} data-scroll data-scroll-speed='-0.5' data-scroll-direction='horizontal'>
               <Img dimension='1162x675' w='full' src={'./images/car.png'} alt='ford everest' />
             </Figure>
           </GridItem>

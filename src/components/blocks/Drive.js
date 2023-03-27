@@ -13,7 +13,7 @@ export default function Drive() {
     <Container pb={{ base: '6px', lg:'67px' }} pos='relative' zIndex='4' top={{wide: '-60px'}}>
       <Grid gap={{base:'52px', hd:'108px'}} templateColumns={{ lg: '6fr 6fr', wide: '5.5fr 6.5fr', }}>
         <GridItem px={{base:'20px', d:'0' }} display='flex' alignItems={{lg: 'center', wide:'flex-end'}}>
-          <Box pos='relative' ml={{ wide: '-50px'}}>
+          <Box pos='relative' ml={{ wide: '-50px'}} data-scroll data-scroll-speed='1' >
             {/* line */}
             <Box bg='primary' w={{base: '30px', lg: '50px'}} h={{base:'3px', lg: '6px'}} />
 

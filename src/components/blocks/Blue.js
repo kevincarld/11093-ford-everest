@@ -15,7 +15,7 @@ export default function Blue() {
       <Container pt={{ lg: '40px'}} pos='relative' zIndex='30'>
         <Grid pt={{hd: '60px'}} gap={{lg: '60px', wide: '115px'}} templateColumns={{ lg: '1.5fr 1fr' }} >
           <GridItem pt={{base:'56px',}} px={{base: '23px', d: 0}}>
-            <Box pl={{wide:'100px'}}>
+            <Box pl={{wide:'100px'}} data-scroll data-scroll-speed='1' >
               <Text {...texts.preheading} mb={{base: '5px!important', lg: '10px!important'}}> The best of the </Text>
               <PreLine {...texts.heading}>
                 {`Central
@@ -74,7 +74,7 @@ export default function Blue() {
         </GridItem>
 
         <GridItem order={{lg:'-1'}} >
-          <Figure  mt={{wide: '-140px',}}>
+          <Figure pos='relative' zIndex='35' mt={{wide: '-140px',}} data-scroll data-scroll-speed='-0.5' data-scroll-direction='horizontal' >
 
             <Img
               pos='relative'

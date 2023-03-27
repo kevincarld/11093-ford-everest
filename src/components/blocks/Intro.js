@@ -32,7 +32,7 @@ export default function Intro() {
       <Container>
         <Grid templateColumns={{lg: '6fr 6fr', wide: '8fr 4fr'}} gap={{lg: '50px', d:'0'}}>
           <GridItem pos='relative' {...texture.mask}>
-            <Box pos='relative' zIndex='10' p={{base: '25% 20px 55px'}} px={{wide: 0}}>
+            <Box data-scroll data-scroll-speed='1' pos='relative' zIndex='10' p={{base: '25% 20px 55px'}} px={{wide: 0}}>
               <Text as='h2' {...texts.heading}  maxW={{d: '830px'}}>Turon National Park is wedged like a splinter into the western side of the Greater Blue Mountains region. </Text>
 
               {/* Line */}
