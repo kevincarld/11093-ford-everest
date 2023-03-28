@@ -32,17 +32,12 @@ export default function Intro() {
       <Container>
         <Grid templateColumns={{lg: '6fr 6fr', wide: '8fr 4fr'}} gap={{lg: '50px', d:'0'}}>
           <GridItem pos='relative' {...texture.mask}>
-            <Box data-scroll data-scroll-speed='1' pos='relative' zIndex='10' p={{base: '25% 20px 55px'}} px={{wide: 0}}>
-              <Text as='h2' {...texts.heading}  maxW={{d: '830px'}}>Turon National Park is wedged like a splinter into the western side of the Greater Blue Mountains region. </Text>
-
-              {/* Line */}
-              <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='20px' mb='45px'></Box>
-
-              <Text textStyle='body' maxW={{d: '482px'}}>It’s only 185 kilometres from Sydney but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.</Text>
+            <Box data-scroll data-scroll-speed='1' pos='relative' zIndex='10' p={{base: '20% 20px 55px', lg: '300px 20px 55px'}} px={{wide: 0}}>
+              <Text textStyle='body' maxW={{d: '482px'}}>The Hill End region is only a half-day’s drive from Sydney or Canberra, but the urban environment couldn’t feel further away as you drive into rugged hills where silver wattles shimmer, streams run crystal-clear, and ruined gold mines make you feel you’ve been transported to another century.</Text>
             </Box>
           </GridItem>
 
-          <GridItem pos='relative' zIndex='10' pt={{lg: '220px',  wide:'380px', hd:"420px"}}  mr={{wide: '-40%', hd: '-250px'}}>
+          <GridItem pos='relative' zIndex='10' pt={{lg: '220px',  wide:'260px',}}  mr={{wide: '-40%', hd: '-250px'}}>
             <Figure mb={{base: '5px', lg: '30px'}}>
               <Img  dimension='709x479' w={{base: 'full'}} fit='cover' alt='ford everest with driver outside its window' src={'./images/intro-1.jpg'} />
             </Figure>

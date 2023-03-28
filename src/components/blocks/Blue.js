@@ -26,10 +26,10 @@ export default function Blue() {
               <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='55px' />
 
               <Text maxW={{lg: '515px'}} color='white' {...texts.bigBody}>
-                Start at Capertree beyond Lithgow, where you hit the beginning of your 4WD adventure as gravel takes over tarmac at Turon Gates Road.
+              Settle at Glendora or Village campgrounds in Hill End, where you’ll have to share your space with motorhomes, kangaroos and cackling parrots. Several surrounding bush-camping sites offer more seclusion.
               </Text>
               <Text maxW={{lg: '515px'}} mb={{lg: '30px', d: '60px', wide: 0}} color='white' textStyle='body'>
-                A slight reduction in tyre pressure should set you up for steep sections of track now you’re in Turon National Park. The track wiggles along a ridge through scribbly gums, before descending steeply towards the river on a few excitingly sharp bends. You don’t have too far to go to set up camp at either Woolshed Flat or The Diggings.
+                Then check out the region’s history at Hill End Heritage Centre and inspect the town’s many fine colonial-era shop facades and cottages, which date from the 1852 gold-rush frenzy. These days the heritage buildings are colonised by painters and artists.
               </Text>
             </Box>
           </GridItem>
@@ -58,10 +58,12 @@ export default function Blue() {
             maxW={{ lg: '505px' }}
             textStyle='body'
             color='white'
+            data-scroll data-scroll-speed='1'
           >
-            {`The Diggings has the most challenging access, but you’ll find wonderful waterholes along the river, some deep for a serious plunge, others shallow to suit small children. Give your kayak or fishing rod a workout. Kangaroos and wombats crop the grass in late afternoon.
+            {`Next day you can test the Ford Everest’s capability and performance in this region where family adventure awaits. A slight reduction in tyre pressure sets you up for steep sections of track as you head onto the Bridle Track, whose full length you can drive again for the first time since a 2010 rock fall, thanks to the recent opening of Monaghans Bluff Bypass.
 
-              There are no marked bush tracks, but next morning walkers can have a happy time following the river. Crimson rosellas flit through the trees and, if you’re lucky, you might spot a platypus in the river. Fossick in the bush and you’ll see remnants of mining activity. `}
+            This iconic 54-kilometre route to Duramana was established by miners on horseback, which indicates its narrowness, disregard for ups and downs, and many river crossings. That makes it a nice challenge for 4WD enthusiasts without being dangerous or difficult.
+            `}
           </PreLine>
         </GridItem>
 

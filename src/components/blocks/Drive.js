@@ -18,10 +18,10 @@ export default function Drive() {
             <Box bg='primary' w={{base: '30px', lg: '50px'}} h={{base:'3px', lg: '6px'}} />
 
             <Text pt='25px' {...texts.title} maxW={{lg:'505px'}}>
-                The Ford Everest, largely developed and tested in Australia and with plenty of engine grunt, is up to the challenge of the bush conditions.
+              The Ford Everest, developed and tested in Australia and with plenty of engine grunt, is up to the challenge.
             </Text>
             <Text {...texts.content} maxW={{lg:'510px'}}>
-              Although you’ll need reasonable experience, a dedicated off-road screen on your Ford Everest’s dash can assist with information about your driveline settings and the vehicle’s pitch and roll, while a camera provides a view of the terrain ahead.
+              Although you’ll need reasonable experience, a dedicated off-road screen on your Ford Everest’s dash assists with information about road conditions and the vehicle’s pitch and roll, while a camera provides a view of the terrain ahead.
             </Text>
           </Box>
         </GridItem>

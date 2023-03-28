@@ -28,7 +28,7 @@ export default function Camping() {
           data-scroll-speed='0.5'
           data-scroll-direction='horizontal'
         >
-            Your reward is a long weekend or week-long 4WD family escape into rugged bushland where you’ll enjoy both the thrills of off-road driving and the peace of secluded campsites. Just when you’re feeling tired and dusty, you can cool off in a waterhole and watch as the sun sets through the riverside, she-oaks.
+            Your reward is a long weekend or week-long 4WD family escape into rugged bushland where you’ll enjoy both the thrills of off-road driving and the peace of secluded campsites. Just when you’re feeling tired and dusty, you can cool off in a waterhole and watch as the sun sets through riverside she-oaks.
         </Text>
       </Container>
 

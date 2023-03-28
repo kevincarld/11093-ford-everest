@@ -19,12 +19,12 @@ export default function Travel() {
             <Box w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mt='30px' mb='25px'></Box>
 
             <Text maxW='500px' {...texts.heading} >
-              The main 4WD track also follows the river, crossing back and forwards for some dramatic splashes.
+            A sealed road gives you a gentle start through rolling, cattle-chewed farm country, but soon dissolves to dirt and dust.
             </Text>
             <PreLine color='black' textStyle='body' maxW={{d: '505px'}}>
-              { `Minor tracks branch off, although they’re best avoided after heavy rain. You’ll come across ruined buildings such as the corrugated-iron River Ron’s Hut, and the remains of water races built by early Chinese immigrants.
+              { `Test your skills on ascents and descents – occasionally in reverse should you encounter an oncoming vehicle.
 
-              The steepest 4WD track takes you up Pinnacle Rock, an outcrop of sandstone. Fortunately, the Ford Everest’s sturdy chassis, wider track and suspension tuning offers a balanced performance whether you’re on a highway or on the roughest track.`
+              While you could charge along the Bridle Track’s length, why would you? A choice of ten bush camps along the way ensure you won’t have to rush it, and you’ll find ample opportunities to explore, fish and swim.`
               }
             </PreLine>
           </GridItem>

@@ -23,7 +23,7 @@ export default function SecondIntro() {
             <PreLine data-scroll data-scroll-speed='1'  textStyle='body' maxW={{lg: '505px'}} ml={{wide: 'auto'}}>
               <Box as='span' display='block' w={{base:'30px', lg: '50px'}} bg='accent' h={{base: '3px', lg: '6px'}} mb='30px'></Box>
 
-              {`It reminds you how lucky we are in Australia to have such landscapes so near our cities to feed our spirit of adventure. Pack everyone into a Ford Everest and set off on a 4WD exploration. Turon National Park has everything for a great family getaway: bushwalking, mountain biking, kayaking, fishing, swimming in waterholes.
+              {`It reminds you how lucky we are in Australia to have such landscapes so near our cities that can feed our spirit of adventure. Pack everyone into a Ford Everest and set off on a 4WD exploration. Hill End has everything for a great family getaway: bushwalking, kayaking, fishing, swimming in waterholes, and fossicking for gold.
 
               For 4WD enthusiasts, this is an outstanding destination. You don’t need to be geared up for an outback trek, but the terrain has plenty to challenge your driving skills, including river crossings, steep hills, and narrow tracks between entanglements of eucalyptus trees.`}
             </PreLine>

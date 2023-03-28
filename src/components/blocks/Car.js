@@ -6,8 +6,7 @@ import { mock } from 'utils/common'
 import Container from 'components/util/Container'
 import Img from 'components/util/Img'
 import Figure from 'components/util/Figure'
-import dynamic from 'next/dynamic'
-const Jarallax = dynamic(() => import('../Jarallax'), { ssr: false });
+
 
 export default function Car() {
 
@@ -33,9 +32,6 @@ export default function Car() {
             gridColumn={{lg: '7 / 12', wide: '8 / 13'}}
             gridRow='1'
           >
-            {/* <Figure pl={{base: '60px', wide:'100px'}}>
-              <Img dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />
-            </Figure> */}
 
                 <Figure maxW='440px' mb='40px' ml={{base: '60px', wide:'100px'}}>
                 <Img  dimension='440x502' src={'./images/car-2.jpg'} alt='ford everent through the dust' />

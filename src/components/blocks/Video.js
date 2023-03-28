@@ -19,14 +19,13 @@ export default function Video() {
 
             <PreLine maxW={{lg: '505px'}} textStyle='body'>
             {
-              `Another great way to spend a day is on a three-or-four-hour drive to Sofala, which is still on the Turon River. You’ll meander across private properties where cows and horses play. Then low ranges take over where you can test your skills on steep ascents and descents – occasionally in reverse should you encounter an oncoming vehicle on the narrow tracks.
+              `You could set up camp at Sammy Hole Reserve, where you’ll find wonderful waterholes along the river shallow to suit small children, while others are deep enough to give your fishing rod a workout.
 
-              19th century gold mining town Sofala is a quaint place for a leg-stretch, and has an old pub and several cafés that offer a break from the campfire, plus a playground where the kids can run off some energy.
+              An alternative is Black Gate reserve, which has facilities such as drop toilets, fire pits and a water tank – plus more chances to swim or launch a kayak. Kangaroos and wombats crop the grass in late afternoon. Crimson rosellas flit through the trees and, if you’re lucky, you might spot a platypus in the river.
 
-              Bitumen leads on to Hill End, but it’s winding and scenic bitumen, and worth the drive to see this second gold-rush town. Check out its story at the Hill End Heritage Centre and inspect the town’s many fine colonial-era facades.
+              Another great 4WD route to follow from Hill End brings you to Ophir via the Ullamalla and Long Pont roads, with a crossing of the Macquarie River about halfway along. The tracks take you through a maze of rounded hills and across dried-up creek beds. Fortunately, the Ford Everest’s sturdy chassis, wider track and suspension tuning offers a balanced performance whether you’re on a highway or the roughest track.
 
-              You can camp at Glendora campground or in one of Hill End’s surrounding bush-camping sites. Next day you can test the Ford Everest’s toughness and performance all over again in this region where family adventure awaits.
-              `
+              Fossick in the bush almost anywhere and you’ll see remnants of mining activity and the occasional forlorn and forgotten miners’ tombstones. Ophir reserve at the junction of two creeks is a great camping spot. If you pan in the creeks, you might well turn up flecks of gold. Brilliant.              `
             }
             </PreLine>
           </Box>
